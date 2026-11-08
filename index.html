@@ -1,204 +1,292 @@
 <!DOCTYPE html>
-<html lang="es-PE">
+<html lang="es-PE" class="sin-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kastor · Alquiler de maquinaria liviana y pesada | Construye y avanza</title>
-<meta name="description" content="Alquila compresoras, generadores, martillos demoledores, mezcladoras, planchas compactadoras y más para tu casa u obra. También maquinaria pesada y servicios de demolición, nivelación y movimiento de tierras. Llámanos al 913 170 982.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kastor · Alquiler de maquinaria liviana y pesada en Perú</title>
+<meta name="description" content="Alquila compresoras, generadores, martillos demoledores, mezcladoras, planchas compactadoras y más para tu casa u obra. También maquinaria pesada con operador y servicios de demolición, nivelación y eliminación de desmonte. Llámanos al 913 170 982.">
 <meta name="theme-color" content="#E60F16">
-<meta property="og:title" content="Kastor · Alquiler de maquinaria">
-<meta property="og:description" content="Máquinas para tu casa u obra, entregadas donde las necesites. Construye y avanza.">
-<meta property="og:image" content="img/logo-kastor.png">
+<link rel="canonical" href="https://stlv2400.github.io/kastor-web/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Kastor">
+<meta property="og:title" content="Kastor · Alquiler de maquinaria para tu casa y tu obra">
+<meta property="og:description" content="Compresoras, generadores, martillos, mezcladoras y más. Te la llevamos y te enseñamos a usarla. ☎ 913 170 982">
+<meta property="og:url" content="https://stlv2400.github.io/kastor-web/">
+<meta property="og:image" content="https://stlv2400.github.io/kastor-web/img/og-kastor.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/maq/generador-5500.webp">
 <link rel="stylesheet" href="css/kastor.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Kastor","slogan":"Construye y avanza",
+ "description":"Alquiler de maquinaria liviana y pesada, construcción y servicios generales.",
+ "url":"https://stlv2400.github.io/kastor-web/","image":"https://stlv2400.github.io/kastor-web/img/og-kastor.jpg",
+ "logo":"https://stlv2400.github.io/kastor-web/img/logo-kastor.png",
+ "telephone":["+51913170982","+51946252355"],"address":{"@type":"PostalAddress","addressCountry":"PE"}}
+</script>
 <style>
-/* ---------- HERO ---------- */
-.hero{position:relative;background:var(--negro);color:#fff;padding:clamp(3rem,7vw,5.5rem) 0 0;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(600px 400px at 85% 30%,rgba(230,15,22,.35),transparent 70%),
-  linear-gradient(115deg,transparent 0 55%,rgba(255,255,255,.03) 55% 100%);pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center}
-.hero h1 .linea{display:block}
-.hero h1 .rojo{color:var(--rojo)}
-.hero .lead{color:#d0d0d0;margin:1.4rem 0 2rem}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem}
-.hero-ctas .btn-borde{color:#fff}
-.hero-datos{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.4rem;padding-bottom:3rem}
-.hero-datos div{display:flex;align-items:center;gap:.65rem;font-weight:700;font-size:.92rem;color:#e6e6e6}
-.hero-datos i{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-style:normal;font-size:1.15rem}
-.hero-visual{position:relative;aspect-ratio:1/1;max-width:560px;justify-self:center;width:100%}
-.hero-visual .disco{position:absolute;inset:8%;border-radius:50%;background:var(--rojo);box-shadow:0 0 0 18px rgba(230,15,22,.15),0 0 0 40px rgba(230,15,22,.07)}
-.hero-visual .disco::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 14px,transparent 14px 28px)}
-.hero-visual img{position:absolute;filter:drop-shadow(0 25px 25px rgba(0,0,0,.5))}
-.hv-1{width:58%;left:20%;top:22%;animation:flota 6s ease-in-out infinite}
-.hv-2{width:34%;left:-2%;top:6%;animation:flota 7s ease-in-out infinite reverse}
-.hv-3{width:30%;right:-2%;top:2%;animation:flota 8s ease-in-out infinite}
-.hv-4{width:36%;right:0;bottom:4%;animation:flota 6.5s ease-in-out infinite reverse}
-.hv-5{width:30%;left:2%;bottom:6%;animation:flota 7.5s ease-in-out infinite}
-@keyframes flota{50%{transform:translateY(-12px)}}
-.sello{position:absolute;left:50%;bottom:-2%;transform:translateX(-50%) rotate(-4deg);background:var(--amarillo);color:var(--negro);font-weight:900;padding:.5rem 1rem;border:3px solid var(--negro);border-radius:8px;text-transform:uppercase;font-size:.85rem;white-space:nowrap;box-shadow:6px 6px 0 var(--negro)}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:420px;order:-1}.hero-datos{padding-bottom:2.5rem}}
+/* ======================= HERO ======================= */
+.hero{position:relative;background:var(--negro);color:#fff;padding:2rem 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(520px 380px at 90% 20%,rgba(230,15,22,.35),transparent 70%),linear-gradient(115deg,transparent 0 58%,rgba(255,255,255,.03) 58% 100%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:1.6rem;align-items:center}
+.hero h1{margin-top:.8rem}
+.hero h1 .rojo{color:var(--rojo);display:block}
+.hero .lead{color:#d4d4d4;margin:1rem 0 1.4rem}
+.hero .lead b{color:#fff}
+.hero-ctas{display:grid;gap:.6rem}
+.hero-ctas .btn-borde{color:#fff;border-color:rgba(255,255,255,.5)}
+.hero-datos{display:flex;gap:.5rem;margin-top:1.3rem;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding:0 16px}
+.hero-datos::-webkit-scrollbar{display:none}
+.hero-datos div{flex:none;display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.85rem;color:#e6e6e6;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:.5rem .8rem;border-radius:999px}
+.hero-visual{position:relative;aspect-ratio:1/.82;width:100%;max-width:560px;justify-self:center;margin-top:.5rem}
+.hero-visual .disco{position:absolute;left:12%;right:12%;top:2%;aspect-ratio:1;border-radius:50%;background:var(--rojo);box-shadow:0 0 0 14px rgba(230,15,22,.15),0 0 0 32px rgba(230,15,22,.06)}
+.hero-visual .disco::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.09) 0 12px,transparent 12px 24px)}
+.hero-visual img{position:absolute;filter:drop-shadow(0 18px 18px rgba(0,0,0,.55))}
+.hv-1{width:56%;left:22%;top:20%;animation:flota 6s ease-in-out infinite}
+.hv-2{width:33%;left:0;top:2%;animation:flota 7s ease-in-out infinite reverse}
+.hv-3{width:27%;right:2%;top:0;animation:flota 8s ease-in-out infinite}
+.hv-4{width:33%;right:0;bottom:2%;animation:flota 6.5s ease-in-out infinite reverse}
+.hv-5{width:27%;left:2%;bottom:4%;animation:flota 7.5s ease-in-out infinite}
+@keyframes flota{50%{transform:translateY(-10px)}}
+.sello{position:absolute;left:50%;bottom:-1%;transform:translateX(-50%) rotate(-3deg);background:var(--amarillo);color:var(--negro);font-weight:900;padding:.4rem .85rem;border:3px solid var(--negro);border-radius:8px;text-transform:uppercase;font-size:clamp(.7rem,2.6vw,.85rem);white-space:nowrap;box-shadow:5px 5px 0 var(--negro)}
+.hero .cinta-texto{margin-top:1.8rem}
+@media (min-width:560px){.hero-ctas{display:flex;flex-wrap:wrap}}
+@media (min-width:900px){
+  .hero{padding-top:4.5rem}
+  .hero-grid{grid-template-columns:1.05fr 1fr;gap:2.5rem}
+  .hero-visual{aspect-ratio:1;margin:0}
+  .hero-visual .disco{inset:8%;aspect-ratio:auto}
+  .hero-datos{flex-wrap:wrap;margin:2rem 0 0;padding:0;overflow:visible}
+  .hero .cinta-texto{margin-top:3rem}
+}
 
-/* ---------- ASISTENTE ---------- */
-.asistente{display:grid;grid-template-columns:1fr 1.05fr;gap:2rem;align-items:start}
-.tareas{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
-.tarea{display:flex;align-items:center;gap:.8rem;text-align:left;font-family:inherit;font-weight:700;font-size:.95rem;padding:1rem;border-radius:var(--radio-s);border:2px solid var(--concreto-2);background:#fff;cursor:pointer;transition:.15s;color:var(--negro)}
-.tarea:hover{border-color:var(--negro);transform:translateY(-2px)}
-.tarea[aria-pressed=true]{border-color:var(--rojo);background:var(--rojo-claro);box-shadow:0 8px 20px -10px rgba(230,15,22,.6)}
-.tarea .emo{font-size:1.6rem;width:44px;height:44px;flex:none;display:grid;place-items:center;background:var(--concreto);border-radius:10px}
-.respuesta{position:sticky;top:96px;background:var(--negro);color:#fff;border-radius:var(--radio);padding:clamp(1.4rem,3vw,2rem);overflow:hidden;min-height:100%}
-.respuesta::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 14px,var(--negro) 14px 28px)}
-.resp-vacia{display:grid;place-items:center;text-align:center;gap:1rem;padding:2rem 0;color:#bdbdbd}
-.resp-vacia img{width:150px;opacity:.9;filter:invert(1)}
-.resp-titulo{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo);font-weight:800;margin:.6rem 0 .3rem}
-.resp-maquinas{display:grid;gap:1rem;margin:1rem 0 1.4rem}
-.resp-maq{display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:center;background:rgba(255,255,255,.06);border-radius:14px;padding:.8rem}
-.resp-maq .foto{background:#fff;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:.5rem}
-.resp-maq .foto img{max-height:90px;object-fit:contain}
-.resp-maq h4{font-size:1.1rem;font-weight:800;letter-spacing:0}
-.resp-maq p{font-size:.9rem;color:#cfcfcf;line-height:1.45}
-.consejo{display:flex;gap:.7rem;background:rgba(255,210,0,.12);border-left:4px solid var(--amarillo);padding:.8rem 1rem;border-radius:8px;font-size:.9rem;color:#f1f1f1;margin-bottom:1.3rem}
-@media (max-width:900px){.asistente{grid-template-columns:1fr}.respuesta{position:static}}
-@media (max-width:480px){.tareas{grid-template-columns:1fr}.resp-maq{grid-template-columns:84px 1fr}}
+/* =================== PARA QUIÉN =================== */
+.quien{padding:1.6rem 0;background:#fff;border-bottom:1px solid var(--concreto-2)}
+.quien-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.quien-item{display:flex;align-items:center;gap:.65rem;font-weight:700;font-size:.88rem;line-height:1.25}
+.quien-item i{font-style:normal;width:42px;height:42px;flex:none;border-radius:12px;background:var(--rojo-claro);display:grid;place-items:center;font-size:1.25rem}
+.quien-item small{display:block;font-weight:500;color:var(--acero);font-size:.78rem}
+@media (min-width:800px){.quien-grid{grid-template-columns:repeat(4,1fr);gap:1rem}.quien-item{font-size:.95rem}}
 
-/* ---------- CATÁLOGO ---------- */
-.filtros{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.6rem;margin-bottom:1.8rem;scrollbar-width:none}
+/* ==================== ASISTENTE ==================== */
+.asistente{display:grid;grid-template-columns:minmax(0,1fr);gap:1.2rem}
+.tareas{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.tarea{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;text-align:left;font-weight:700;font-size:.9rem;line-height:1.25;padding:.9rem;border-radius:var(--radio-s);border:2px solid var(--concreto-2);background:#fff;cursor:pointer;transition:.15s;min-height:104px}
+.tarea:active{transform:scale(.98)}
+@media (hover:hover){.tarea:hover{border-color:var(--negro)}}
+.tarea[aria-pressed=true]{border-color:var(--rojo);background:var(--rojo-claro);box-shadow:0 8px 20px -12px rgba(230,15,22,.7)}
+.tarea .emo{font-size:1.45rem;width:42px;height:42px;flex:none;display:grid;place-items:center;background:var(--concreto);border-radius:10px}
+.tarea[aria-pressed=true] .emo{background:#fff}
+.respuesta{background:var(--negro);color:#fff;border-radius:var(--radio);padding:1.6rem 1.1rem 1.2rem;position:relative;overflow:hidden;scroll-margin-top:calc(var(--alto-header) + 12px)}
+.respuesta::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 12px,var(--negro) 12px 24px)}
+.resp-vacia{display:flex;align-items:center;gap:1rem;color:#bdbdbd;font-size:.92rem}
+.resp-vacia img{width:76px;filter:invert(1);opacity:.9;flex:none}
+.resp-vacia b{color:#fff;display:block;font-size:1.02rem}
+.resp-titulo{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amarillo);font-weight:800}
+.resp-maquinas{display:grid;gap:.7rem;margin:.9rem 0 1rem}
+.resp-maq{display:grid;grid-template-columns:84px 1fr;gap:.85rem;align-items:center;background:rgba(255,255,255,.06);border-radius:14px;padding:.7rem}
+.resp-maq .foto{background:#fff;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:.4rem}
+.resp-maq .foto img{max-height:70px;object-fit:contain}
+.resp-maq h4{font-size:1rem;font-weight:800;letter-spacing:0;margin-bottom:.2rem}
+.resp-maq p{font-size:.86rem;color:#d0d0d0;line-height:1.45}
+.consejo{display:flex;gap:.6rem;background:rgba(255,210,0,.12);border-left:4px solid var(--amarillo);padding:.75rem .9rem;border-radius:8px;font-size:.88rem;color:#f1f1f1;margin-bottom:1rem;line-height:1.5}
+@media (min-width:600px){.tareas{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:1000px){
+  .asistente{grid-template-columns:1fr 1.05fr;gap:2rem;align-items:start}
+  .tareas{grid-template-columns:repeat(2,1fr);gap:.8rem}
+  .tarea{flex-direction:row;align-items:center;min-height:76px;font-size:.95rem;padding:1rem}
+  .respuesta{position:sticky;top:96px;padding:2rem}
+  .resp-vacia{flex-direction:column;text-align:center;padding:2.5rem 0}
+  .resp-vacia img{width:140px}
+  .resp-maq{grid-template-columns:110px 1fr}
+  .resp-maq .foto img{max-height:90px}
+}
+
+/* ==================== CATÁLOGO ==================== */
+.filtros-wrap{position:sticky;top:var(--alto-header);z-index:20;background:#fff;margin-inline:-16px;padding:.6rem 16px;margin-bottom:1rem;border-bottom:1px solid transparent;transition:border-color .2s}
+.filtros-wrap.pegado{border-bottom-color:var(--concreto-2);box-shadow:0 8px 16px -14px rgba(0,0,0,.4)}
+.filtros{display:flex;gap:.45rem;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:2rem}
 .filtros::-webkit-scrollbar{display:none}
-.chip{flex:none;font-family:inherit;font-weight:700;font-size:.9rem;padding:.6rem 1.1rem;border-radius:999px;border:2px solid var(--concreto-2);background:#fff;cursor:pointer;color:var(--negro)}
+.chip{flex:none;font-weight:700;font-size:.88rem;min-height:42px;padding:.45rem 1rem;border-radius:999px;border:2px solid var(--concreto-2);background:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem}
 .chip.activo{background:var(--negro);border-color:var(--negro);color:#fff}
-.grid-maq{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.3rem}
-.maq{display:flex;flex-direction:column;overflow:hidden;transition:transform .2s,box-shadow .2s}
-.maq:hover{transform:translateY(-6px);box-shadow:var(--sombra-l)}
-.maq .foto{position:relative;height:210px;background:linear-gradient(160deg,#fff 0%,var(--concreto) 100%);display:grid;place-items:center;padding:1.2rem}
-.maq .foto img{max-height:100%;max-width:100%;min-height:0;object-fit:contain;transition:transform .3s}
-.maq:hover .foto img{transform:scale(1.06) rotate(-1deg)}
-.maq .cat{position:absolute;top:12px;left:12px;background:var(--negro);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .65rem;border-radius:6px}
-.maq .cuerpo{padding:1.2rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
-.maq h3{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
-.maq .sirve{font-size:.92rem;color:#454545;line-height:1.5}
+.chip .n{font-size:.72rem;opacity:.6}
+.grid-maq{display:grid;gap:.75rem}
+.maq{display:grid;grid-template-columns:112px 1fr;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.maq .foto{position:relative;background:linear-gradient(160deg,#fff 0%,var(--concreto) 100%);display:grid;place-items:center;padding:.6rem}
+.maq .foto img{max-height:110px;max-width:100%;object-fit:contain;transition:transform .3s}
+.maq .cat{display:none}
+.maq .cuerpo{padding:.85rem .9rem .9rem;display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.maq h3{font-size:1rem;font-weight:800;letter-spacing:-.01em}
+.maq .sirve{font-size:.86rem;color:#454545;line-height:1.45}
 .maq .sirve b{color:var(--negro)}
-.etiquetas{display:flex;flex-wrap:wrap;gap:.4rem}
-.etq{font-size:.75rem;font-weight:700;padding:.28rem .6rem;border-radius:6px;background:var(--concreto);color:#333}
+.etiquetas{display:flex;flex-wrap:wrap;gap:.3rem}
+.etq{font-size:.72rem;font-weight:700;padding:.22rem .5rem;border-radius:6px;background:var(--concreto);color:#333;white-space:nowrap}
 .etq.facil{background:#E7F8EE;color:#11733A}
-.maq .btn{margin-top:auto;padding:.8rem 1rem;font-size:.92rem}
+.maq .btn{min-height:42px;padding:.5rem .9rem;font-size:.86rem;margin-top:.2rem;align-self:flex-start}
+@media (min-width:640px){
+  .grid-maq{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.1rem}
+  .maq{display:flex;flex-direction:column}
+  .maq .foto{height:200px;padding:1.1rem}
+  .maq .foto img{position:absolute;inset:1rem;width:calc(100% - 2rem);height:calc(100% - 2rem);max-height:none;object-fit:contain}
+  .maq .cat{display:block;z-index:1;position:absolute;top:12px;left:12px;background:var(--negro);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .6rem;border-radius:6px}
+  .maq .cuerpo{padding:1.1rem 1.1rem 1.2rem;flex:1;gap:.6rem}
+  .maq h3{font-size:1.1rem}
+  .maq .sirve{font-size:.9rem}
+  .maq .btn{margin-top:auto;align-self:stretch;min-height:46px;font-size:.9rem}
+}
+@media (hover:hover) and (min-width:640px){.maq:hover{transform:translateY(-5px);box-shadow:var(--sombra-l)}.maq:hover .foto img{transform:scale(1.05) rotate(-1deg)}}
 
-/* ---------- PASOS ---------- */
-.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:paso}
-.paso{position:relative;background:var(--carbon);border:1px solid #2a2a2a;border-radius:var(--radio);padding:1.8rem 1.4rem 1.5rem}
-.paso::before{counter-increment:paso;content:"0" counter(paso);position:absolute;top:-18px;left:1.4rem;background:var(--rojo);color:#fff;font-weight:900;font-size:1.1rem;padding:.35rem .75rem;border-radius:8px;transform:skewX(-8deg)}
-.paso .ico{font-size:2.2rem;margin:.6rem 0 .8rem}
-.paso h3{font-size:1.15rem;margin-bottom:.5rem;letter-spacing:0;font-weight:800}
-.paso p{color:#bdbdbd;font-size:.93rem}
-@media (max-width:900px){.pasos{grid-template-columns:1fr 1fr;row-gap:2.2rem}}
-@media (max-width:520px){.pasos{grid-template-columns:1fr}}
+/* ===================== PASOS ===================== */
+.pasos{display:grid;gap:.8rem;counter-reset:paso}
+.paso{position:relative;display:grid;grid-template-columns:52px 1fr;gap:.9rem;align-items:start;background:var(--carbon);border:1px solid #262626;border-radius:var(--radio);padding:1.1rem}
+.paso .ico{width:52px;height:52px;border-radius:14px;background:var(--rojo);display:grid;place-items:center;font-size:1.5rem;position:relative}
+.paso .ico::after{counter-increment:paso;content:counter(paso);position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;background:var(--amarillo);color:var(--negro);font-weight:900;font-size:.8rem;display:grid;place-items:center}
+.paso h3{font-size:1.05rem;margin-bottom:.25rem;letter-spacing:0;font-weight:800}
+.paso p{color:#bdbdbd;font-size:.9rem;line-height:1.5}
+@media (min-width:700px){.pasos{grid-template-columns:1fr 1fr;gap:1.1rem}}
+@media (min-width:1000px){.pasos{grid-template-columns:repeat(4,1fr)}.paso{grid-template-columns:1fr;padding:1.6rem 1.4rem}}
 
-/* ---------- SERVICIOS ---------- */
-.servicios{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
-.serv{padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;position:relative;overflow:hidden}
-.serv::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;background:var(--rojo);opacity:.07;transform:rotate(45deg)}
-.serv .ico{width:56px;height:56px;border-radius:14px;background:var(--rojo);color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 10px 20px -10px rgba(230,15,22,.8)}
-.serv h3{font-size:1.25rem;font-weight:800;letter-spacing:-.01em}
-.serv p{color:#4a4a4a;font-size:.95rem}
-.serv ul{list-style:none;display:grid;gap:.35rem;font-size:.9rem}
-.serv li{display:flex;gap:.5rem}
-.serv li::before{content:"✔";color:var(--rojo);font-weight:900}
-.serv-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:2rem;padding:1.5rem 1.8rem;border-radius:var(--radio);background:var(--amarillo);border:3px solid var(--negro);box-shadow:8px 8px 0 var(--negro)}
-.serv-cta h3{font-size:clamp(1.2rem,2.5vw,1.6rem);text-transform:uppercase}
+/* ==================== SERVICIOS ==================== */
+.servicios{display:grid;gap:.8rem}
+.serv{padding:1.15rem;display:grid;grid-template-columns:50px 1fr;gap:.35rem .9rem;position:relative;overflow:hidden}
+.serv::after{content:"";position:absolute;right:-34px;top:-34px;width:100px;height:100px;background:var(--rojo);opacity:.06;transform:rotate(45deg)}
+.serv .ico{grid-row:span 2;width:50px;height:50px;border-radius:14px;background:var(--rojo);display:grid;place-items:center;font-size:1.5rem;box-shadow:0 10px 20px -10px rgba(230,15,22,.8)}
+.serv h3{font-size:1.1rem;font-weight:800;letter-spacing:-.01em;align-self:center}
+.serv p{color:#4a4a4a;font-size:.9rem;line-height:1.5}
+.serv ul{grid-column:1/-1;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.serv li{font-size:.78rem;font-weight:700;background:var(--concreto);padding:.3rem .6rem;border-radius:6px}
+.serv li::before{content:"✔ ";color:var(--rojo)}
+.serv-cta{display:grid;gap:1rem;margin-top:1.6rem;padding:1.3rem;border-radius:var(--radio);background:var(--amarillo);border:3px solid var(--negro);box-shadow:6px 6px 0 var(--negro)}
+.serv-cta h3{font-size:clamp(1.15rem,4.5vw,1.6rem);text-transform:uppercase}
+.serv-cta h3 span{display:block;font-size:.7em;margin-top:.3rem}
+@media (min-width:700px){.servicios{grid-template-columns:repeat(2,1fr);gap:1.1rem}.serv-cta{grid-template-columns:1fr auto;align-items:center;padding:1.5rem 1.8rem}}
+@media (min-width:1000px){
+  .servicios{grid-template-columns:repeat(3,1fr)}
+  .serv{grid-template-columns:1fr;padding:1.6rem;gap:.7rem}
+  .serv .ico{grid-row:auto;width:56px;height:56px}
+  .serv ul{display:grid;gap:.35rem;margin:0}
+  .serv li{background:none;padding:0;font-size:.88rem;font-weight:500}
+}
 
-/* ---------- PESADA ---------- */
-.pesada{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.pes{background:var(--carbon);border-radius:var(--radio);overflow:hidden;border:1px solid #2a2a2a;display:flex;flex-direction:column}
-.pes .foto{height:220px;display:grid;place-items:center;padding:1.2rem;background:radial-gradient(circle at 50% 70%,#3a3a3a 0,#161616 70%)}
-.pes .foto img{max-height:100%;max-width:100%;min-height:0;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(0,0,0,.6))}
-.pes .cuerpo{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
-.pes h3{font-size:1.2rem;font-weight:800;letter-spacing:0}
-.pes p{color:#bdbdbd;font-size:.93rem}
-.pes .etq{background:#2d2d2d;color:#e5e5e5}
-.pes .btn{margin-top:auto;padding:.75rem 1rem;font-size:.9rem;color:#fff}
-@media (max-width:900px){.pesada{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.pesada{grid-template-columns:1fr}}
+/* ===================== PESADA ===================== */
+#pesada{padding:clamp(3rem,7vw,5rem) 0}
+.pesada{grid-template-columns:repeat(3,1fr)}
+.pes{background:var(--carbon);border-radius:var(--radio);overflow:hidden;border:1px solid #262626;display:flex;flex-direction:column}
+.pes .foto{position:relative;height:170px;padding:1rem;background:radial-gradient(circle at 50% 70%,#3a3a3a 0,#141414 72%)}
+.pes .foto img{position:absolute;inset:1rem;width:calc(100% - 2rem);height:calc(100% - 2rem);object-fit:contain;filter:drop-shadow(0 16px 16px rgba(0,0,0,.6))}
+.pes .cuerpo{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.pes h3{font-size:1.1rem;font-weight:800;letter-spacing:0}
+.pes p{color:#c4c4c4;font-size:.9rem;line-height:1.5}
+.pes .etq{background:#2b2b2b;color:#e5e5e5}
+.pes .btn{margin-top:auto;min-height:46px;font-size:.9rem;color:#fff;border-color:rgba(255,255,255,.45)}
 
-/* ---------- GLOSARIO + FAQ ---------- */
-.glosario{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
-.glos{padding:1.2rem 1.3rem;border-radius:var(--radio-s);background:#fff;border:2px dashed var(--concreto-2)}
-.glos b{display:block;font-size:1.05rem;font-weight:800;margin-bottom:.25rem}
-.glos span{font-size:.9rem;color:#4a4a4a}
-.faq{display:grid;gap:.8rem;max-width:860px}
-.faq details{background:#fff;border-radius:var(--radio-s);border:1px solid var(--concreto-2);padding:0 1.3rem}
-.faq summary{cursor:pointer;list-style:none;font-weight:800;padding:1.15rem 0;display:flex;justify-content:space-between;gap:1rem}
+/* ============== COTIZADOR RÁPIDO ============== */
+.cotizador{display:grid;grid-template-columns:minmax(0,1fr);gap:1.6rem;align-items:start}
+.form{padding:1.3rem;display:grid;gap:.9rem}
+.campo{display:grid;gap:.35rem}
+.campo label{font-weight:800;font-size:.86rem}
+.campo label small{font-weight:500;color:var(--acero)}
+.campo input,.campo select,.campo textarea{font:inherit;font-size:16px;width:100%;min-height:50px;padding:.7rem .9rem;border-radius:12px;border:2px solid var(--concreto-2);background:#fff;color:var(--negro);appearance:none;-webkit-appearance:none}
+.campo select{background-image:linear-gradient(45deg,transparent 50%,var(--negro) 50%),linear-gradient(135deg,var(--negro) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:2.4rem}
+.campo textarea{min-height:84px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--rojo);box-shadow:0 0 0 4px rgba(230,15,22,.12)}
+.fila-2{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.contador{display:grid;grid-template-columns:50px 1fr 50px;border:2px solid var(--concreto-2);border-radius:12px;overflow:hidden;min-height:50px}
+.contador button{border:0;background:var(--concreto);font-size:1.4rem;font-weight:800;cursor:pointer}
+.contador input{border:0;text-align:center;font-weight:800;min-height:46px;border-radius:0;padding:0}
+.contador input:focus{box-shadow:none}
+.form .nota{font-size:.8rem;color:var(--acero);text-align:center}
+.beneficios{display:grid;gap:.7rem}
+.beneficio{display:flex;gap:.8rem;align-items:flex-start}
+.beneficio i{font-style:normal;width:44px;height:44px;flex:none;border-radius:12px;background:var(--negro);display:grid;place-items:center;font-size:1.2rem}
+.beneficio b{display:block;font-size:.98rem}
+.beneficio span{font-size:.88rem;color:#4a4a4a}
+@media (min-width:900px){.cotizador{grid-template-columns:1fr 1.05fr;gap:3rem}.form{padding:1.8rem}}
+
+/* ============== GLOSARIO + FAQ ============== */
+.glosario{grid-template-columns:repeat(2,1fr)}
+.glos{padding:1rem 1.1rem;border-radius:var(--radio-s);background:#fff;border:2px dashed var(--concreto-2)}
+.glos b{display:block;font-size:1rem;font-weight:800;margin-bottom:.2rem}
+.glos span{font-size:.88rem;color:#4a4a4a;line-height:1.5}
+.faq{display:grid;gap:.6rem}
+.faq details{background:#fff;border-radius:var(--radio-s);border:1px solid var(--concreto-2)}
+.faq summary{cursor:pointer;list-style:none;font-weight:800;font-size:.97rem;padding:1rem 1.1rem;min-height:56px;display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--rojo);transition:transform .2s}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--rojo);transition:transform .2s;flex:none}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{padding-bottom:1.2rem;color:#444}
-.dos-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-@media (max-width:900px){.dos-col{grid-template-columns:1fr}}
+.faq details p{padding:0 1.1rem 1.1rem;color:#444;font-size:.94rem}
+.dos-col{display:grid;grid-template-columns:minmax(0,1fr);gap:3rem}
+@media (min-width:1000px){.dos-col{grid-template-columns:1fr 1fr}}
 
-/* ---------- CTA FINAL ---------- */
-.cta-final{position:relative;background:var(--rojo);color:#fff;overflow:hidden;padding:clamp(3.5rem,8vw,5.5rem) 0}
+/* ==================== CTA FINAL ==================== */
+.cta-final{position:relative;background:var(--rojo);color:#fff;overflow:hidden}
 .cta-final::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.07) 0 22px,transparent 22px 44px)}
-.cta-final .contenedor{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
-.cta-final img{width:min(320px,80%);justify-self:center;filter:brightness(0) invert(1);opacity:.95}
-.telefonos{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
-.tel{background:#fff;color:var(--negro);text-decoration:none;font-weight:900;font-size:clamp(1.3rem,3vw,1.9rem);padding:.55rem 1.2rem;border-radius:12px;box-shadow:6px 6px 0 var(--negro);letter-spacing:.02em}
-.tel:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--negro)}
-@media (max-width:800px){.cta-final .contenedor{grid-template-columns:1fr}.cta-final img{display:none}}
+.cta-final .contenedor{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;align-items:center}
+.cta-final .castor{display:none}
+.telefonos{display:grid;gap:.7rem;margin-top:1.4rem}
+.tel{display:flex;align-items:center;justify-content:center;gap:.6rem;background:#fff;color:var(--negro);text-decoration:none;font-weight:900;font-size:clamp(1.35rem,6vw,1.9rem);padding:.6rem 1.2rem;border-radius:14px;box-shadow:5px 5px 0 var(--negro);letter-spacing:.02em;min-height:60px}
+.tel svg{width:24px;height:24px;color:var(--rojo)}
+.tel:active{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--negro)}
+@media (min-width:560px){.telefonos{display:flex;flex-wrap:wrap}}
+@media (min-width:860px){.cta-final .contenedor{grid-template-columns:1.4fr 1fr}.cta-final .castor{display:block;width:min(300px,80%);justify-self:center;filter:brightness(0) invert(1)}}
 </style>
 </head>
 <body>
+<a class="sr" href="#equipos">Saltar al catálogo</a>
 
 <!-- ============ ENCABEZADO ============ -->
 <header class="header">
   <div class="contenedor">
-    <a class="marca" href="#inicio" aria-label="Kastor, ir al inicio">
-      <img src="img/isotipo-kastor.png" alt="">
-      <span><b>KASTOR</b><small>CONSTRUYE Y AVANZA</small></span>
-    </a>
-    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false" id="menuBtn"><span></span><span></span><span></span></button>
-    <nav class="nav" id="nav">
-      <a href="#que-necesito">¿Qué necesito?</a>
-      <a href="#equipos">Equipos</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#pesada">Maquinaria pesada</a>
-      <a href="#preguntas">Preguntas</a>
-      <a class="btn btn-rojo" href="#contacto">Cotiza gratis</a>
+    <a class="marca" href="#inicio" aria-label="Kastor, ir al inicio"><img src="img/logo-horizontal.png" alt="Kastor" width="1610" height="444"></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#que-necesito"><span class="e">🤔</span>¿Qué necesito?</a>
+      <a href="#equipos"><span class="e">🔧</span>Equipos</a>
+      <a href="#servicios"><span class="e">🔨</span>Servicios</a>
+      <a href="#pesada"><span class="e">🚜</span>Maquinaria pesada</a>
+      <a href="#preguntas"><span class="e">❓</span>Preguntas</a>
+      <a class="tel-header" href="tel:+51913170982"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>913 170 982</a>
+      <a class="btn btn-rojo" href="#cotizar">Cotiza gratis</a>
     </nav>
+    <div class="header-acciones">
+      <a class="icono-btn rojo-bg solo-movil" href="tel:+51913170982" aria-label="Llamar a Kastor"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg></a>
+      <button class="icono-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
+<div class="velo" id="velo"></div>
 
+<main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
   <div class="contenedor hero-grid">
-    <div class="aparece">
-      <span class="kicker">Alquiler de maquinaria en Perú</span>
-      <h1 class="h-display" style="margin-top:1rem">
-        <span class="linea">La máquina</span>
-        <span class="linea">que tu obra</span>
-        <span class="linea rojo">necesita, hoy.</span>
-      </h1>
-      <p class="lead">Compresoras, generadores, martillos, mezcladoras y más, para tu <b style="color:#fff">casa</b> o tu <b style="color:#fff">obra</b>. Te la llevamos, te enseñamos a usarla y la recogemos cuando terminas.</p>
+    <div>
+      <span class="kicker">Construye y avanza</span>
+      <h1 class="h-display">La máquina que tu obra <span class="rojo">necesita, hoy.</span></h1>
+      <p class="lead">Compresoras, generadores, martillos, mezcladoras y más, para tu <b>casa</b> o tu <b>obra</b>. Te la llevamos, te enseñamos a usarla y la recogemos cuando terminas.</p>
       <div class="hero-ctas">
-        <a class="btn btn-wa" data-wa="Hola Kastor 👋 Quiero alquilar una máquina." href="#">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16A11.87 11.87 0 0112.04 0C18.6 0 24 5.33 24 11.9a11.94 11.94 0 01-17.6 10.46L.06 24zm6.6-3.8a9.86 9.86 0 0015.33-8.3A9.9 9.9 0 002 11.93a9.8 9.8 0 001.66 5.47l-.99 3.62 3.98-1.04zM17.4 14.9c-.08-.13-.29-.21-.6-.36s-1.78-.88-2.05-.98-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.66.07a8.1 8.1 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.61l.45-.53a2 2 0 00.3-.5.55.55 0 000-.52c-.08-.15-.68-1.63-.93-2.24s-.5-.5-.68-.5h-.58a1.1 1.1 0 00-.8.37 3.35 3.35 0 00-1.04 2.49 5.8 5.8 0 001.22 3.08 13.3 13.3 0 005.1 4.5c.71.3 1.27.49 1.7.63a4.1 4.1 0 001.88.12 3.07 3.07 0 002.02-1.42 2.5 2.5 0 00.17-1.42z"/></svg>
-          Pide por WhatsApp
-        </a>
+        <a class="btn btn-wa" data-wa="Hola Kastor 👋 Quiero alquilar una máquina." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Pide por WhatsApp</a>
         <a class="btn btn-borde" href="#que-necesito">¿Qué máquina necesito?</a>
       </div>
       <div class="hero-datos">
-        <div><i>🚚</i>Te la llevamos</div>
-        <div><i>🧑‍🏫</i>Te enseñamos a usarla</div>
-        <div><i>📅</i>Por día o por semana</div>
+        <div>🚚 Te la llevamos</div>
+        <div>🧑‍🏫 Te enseñamos a usarla</div>
+        <div>📅 Por día o semana</div>
+        <div>🧾 Boleta o factura</div>
       </div>
     </div>
-    <div class="hero-visual aparece" aria-hidden="true">
+    <div class="hero-visual" aria-hidden="true">
       <div class="disco"></div>
-      <img class="hv-2" src="img/maq/compresora.webp" alt="">
-      <img class="hv-3" src="img/maq/martillo-demoledor.webp" alt="">
-      <img class="hv-1" src="img/maq/generador-5500.webp" alt="">
-      <img class="hv-5" src="img/maq/plancha-compactadora.webp" alt="">
-      <img class="hv-4" src="img/maq/mezcladora.webp" alt="">
+      <img class="hv-2" src="img/maq/compresora.webp" alt="" width="640" height="511">
+      <img class="hv-3" src="img/maq/martillo-demoledor.webp" alt="" width="640" height="640">
+      <img class="hv-1" src="img/maq/generador-5500.webp" alt="" width="640" height="501" fetchpriority="high">
+      <img class="hv-5" src="img/maq/plancha-compactadora.webp" alt="" width="623" height="640">
+      <img class="hv-4" src="img/maq/mezcladora.webp" alt="" width="489" height="533">
       <div class="sello">¡Déjanoslo a nosotros!</div>
     </div>
   </div>
@@ -210,20 +298,30 @@
   </div>
 </section>
 
+<!-- ============ PARA QUIÉN ============ -->
+<div class="quien">
+  <div class="contenedor quien-grid">
+    <div class="quien-item"><i>🏠</i><span>Familias<small>Remodelas tu casa</small></span></div>
+    <div class="quien-item"><i>👷</i><span>Maestros de obra<small>Avanza más rápido</small></span></div>
+    <div class="quien-item"><i>🏗️</i><span>Constructoras<small>Equipos por semana o mes</small></span></div>
+    <div class="quien-item"><i>🏛️</i><span>Empresas y municipios<small>Con factura y operador</small></span></div>
+  </div>
+</div>
+
 <!-- ============ ASISTENTE ============ -->
 <section id="que-necesito" class="gris">
   <div class="contenedor">
     <div class="cabecera-seccion aparece">
-      <span class="kicker">Paso 1 · Te ayudamos a elegir</span>
+      <span class="kicker">Te ayudamos a elegir</span>
       <h2 class="h-seccion">¿Qué quieres hacer?</h2>
-      <p class="lead">No necesitas saber el nombre de la máquina. Elige tu trabajo y te decimos cuál te sirve.</p>
+      <p class="lead">No necesitas saber el nombre de la máquina. Toca tu trabajo y te decimos cuál te sirve.</p>
     </div>
     <div class="asistente">
-      <div class="tareas aparece" id="tareas" role="group" aria-label="Elige lo que quieres hacer"></div>
-      <div class="respuesta aparece" id="respuesta" aria-live="polite">
+      <div class="tareas" id="tareas" role="group" aria-label="Elige lo que quieres hacer"></div>
+      <div class="respuesta" id="respuesta" aria-live="polite">
         <div class="resp-vacia">
-          <img src="img/castor-silueta.png" alt="">
-          <p><b style="color:#fff;font-size:1.1rem">Elige un trabajo de la lista</b><br>y aquí verás la máquina ideal, para qué sirve y un consejo de nuestro equipo.</p>
+          <img src="img/castor-silueta.png" alt="" width="800" height="573">
+          <p><b>Toca un trabajo de la lista</b>y aquí verás la máquina ideal, para qué sirve y un consejo de nuestro equipo.</p>
         </div>
       </div>
     </div>
@@ -236,9 +334,9 @@
     <div class="cabecera-seccion aparece">
       <span class="kicker">Maquinaria liviana</span>
       <h2 class="h-seccion">Equipos para tu casa y tu obra</h2>
-      <p class="lead">Máquinas fáciles de mover y de usar. Cada una tiene una explicación sencilla para que sepas exactamente para qué sirve.</p>
+      <p class="lead">Máquinas fáciles de mover y de usar. Cada una te explica, en simple, para qué sirve.</p>
     </div>
-    <div class="filtros" id="filtros" role="tablist" aria-label="Filtrar equipos"></div>
+    <div class="filtros-wrap" id="filtrosWrap"><div class="filtros" id="filtros" role="toolbar" aria-label="Filtrar equipos"></div></div>
     <div class="grid-maq" id="gridMaq"></div>
   </div>
 </section>
@@ -252,10 +350,10 @@
       <p class="lead">Sin papeleo complicado. Todo por WhatsApp o una llamada.</p>
     </div>
     <div class="pasos">
-      <div class="paso aparece"><div class="ico">💬</div><h3>Escríbenos</h3><p>Cuéntanos qué trabajo vas a hacer, dónde y por cuántos días. Si no sabes qué máquina pedir, te asesoramos.</p></div>
-      <div class="paso aparece"><div class="ico">🧾</div><h3>Recibe tu cotización</h3><p>Te enviamos el precio claro, sin sorpresas: alquiler, traslado y garantía.</p></div>
-      <div class="paso aparece"><div class="ico">🚚</div><h3>Te la llevamos</h3><p>Entregamos la máquina revisada y lista. Te explicamos cómo usarla de forma segura.</p></div>
-      <div class="paso aparece"><div class="ico">✅</div><h3>Trabaja y avanza</h3><p>Cuando termines, nos avisas y la recogemos. ¿Necesitas más días? Lo extendemos con un mensaje.</p></div>
+      <div class="paso aparece"><div class="ico">💬</div><div><h3>Escríbenos</h3><p>Cuéntanos qué trabajo harás, dónde y por cuántos días. Si no sabes qué máquina pedir, te asesoramos.</p></div></div>
+      <div class="paso aparece"><div class="ico">🧾</div><div><h3>Recibe tu cotización</h3><p>Te enviamos un precio claro: alquiler, traslado y garantía. Sin sorpresas.</p></div></div>
+      <div class="paso aparece"><div class="ico">🚚</div><div><h3>Te la llevamos</h3><p>Llega revisada y lista. Te explicamos cómo usarla de forma segura.</p></div></div>
+      <div class="paso aparece"><div class="ico">✅</div><div><h3>Trabaja y avanza</h3><p>Al terminar, nos avisas y la recogemos. ¿Más días? Lo extendemos con un mensaje.</p></div></div>
     </div>
   </div>
 </section>
@@ -266,12 +364,12 @@
     <div class="cabecera-seccion aparece">
       <span class="kicker">Servicios generales</span>
       <h2 class="h-seccion">¿No quieres hacerlo tú? Lo hacemos por ti</h2>
-      <p class="lead">Ponemos la máquina <b>y el personal</b>. Tú solo nos dices qué necesitas y nosotros nos encargamos.</p>
+      <p class="lead">Ponemos la máquina <b>y el personal</b>. Tú nos dices qué necesitas y nosotros nos encargamos.</p>
     </div>
     <div class="servicios" id="gridServ"></div>
     <div class="serv-cta aparece">
-      <h3>¿Tienes un trabajo en mente?<br><span style="font-size:.75em">Visitamos tu terreno y te cotizamos.</span></h3>
-      <a class="btn btn-negro" data-wa="Hola Kastor 👋 Quiero cotizar un servicio (demolición / nivelación / excavación)." href="#">Pedir visita técnica</a>
+      <h3>¿Tienes un trabajo en mente?<span>Visitamos tu terreno y te cotizamos.</span></h3>
+      <a class="btn btn-negro" data-wa="Hola Kastor 👋 Quiero una visita técnica para cotizar un servicio." href="#">Pedir visita técnica</a>
     </div>
   </div>
 </section>
@@ -282,42 +380,75 @@
     <div class="cabecera-seccion aparece">
       <span class="kicker">Maquinaria pesada</span>
       <h2 class="h-seccion">Para los trabajos grandes</h2>
-      <p class="lead">Cuando el trabajo crece, también tenemos maquinaria pesada. Se alquila <b style="color:#fff">con operador experimentado</b>, para que no te preocupes por nada.</p>
+      <p class="lead">También tenemos maquinaria pesada, siempre <b style="color:#fff">con operador experimentado</b> para que no te preocupes por nada.</p>
     </div>
-    <div class="pesada" id="gridPes"></div>
+    <p class="desliza" style="color:#9a9a9a">Desliza para ver más</p>
+    <div class="pesada carrusel-m" id="gridPes"></div>
+  </div>
+</section>
+
+<!-- ============ COTIZADOR ============ -->
+<section id="cotizar">
+  <div class="contenedor cotizador">
+    <div>
+      <div class="cabecera-seccion aparece">
+        <span class="kicker">Cotiza en 1 minuto</span>
+        <h2 class="h-seccion">Arma tu pedido</h2>
+        <p class="lead">Llena estos datos y se abrirá WhatsApp con tu pedido listo para enviar. Te respondemos con el precio.</p>
+      </div>
+      <div class="beneficios aparece">
+        <div class="beneficio"><i>⚡</i><div><b>Respuesta rápida</b><span>Te contestamos por WhatsApp con precio y disponibilidad.</span></div></div>
+        <div class="beneficio"><i>🔧</i><div><b>Equipos revisados</b><span>Cada máquina se revisa antes de salir.</span></div></div>
+        <div class="beneficio"><i>🤝</i><div><b>Te asesoramos</b><span>Si dudas qué máquina pedir, te ayudamos a elegir.</span></div></div>
+      </div>
+    </div>
+    <form class="form tarjeta aparece" id="formCotiza" novalidate>
+      <div class="campo"><label for="fEquipo">¿Qué necesitas?</label><select id="fEquipo" required></select></div>
+      <div class="fila-2">
+        <div class="campo"><label for="fDias">¿Cuántos días?</label>
+          <div class="contador"><button type="button" data-d="-1" aria-label="Menos días">−</button><input id="fDias" type="number" inputmode="numeric" min="1" max="365" value="1"><button type="button" data-d="1" aria-label="Más días">+</button></div></div>
+        <div class="campo"><label for="fFecha">¿Desde cuándo?</label><input id="fFecha" type="date"></div>
+      </div>
+      <div class="campo"><label for="fLugar">¿Dónde? <small>(distrito o zona)</small></label><input id="fLugar" type="text" autocomplete="address-level2" placeholder="Ej.: San Juan de Lurigancho"></div>
+      <div class="campo"><label for="fNombre">Tu nombre</label><input id="fNombre" type="text" autocomplete="name" placeholder="Ej.: Juan Pérez"></div>
+      <div class="campo"><label for="fNota">Cuéntanos tu trabajo <small>(opcional)</small></label><textarea id="fNota" placeholder="Ej.: Voy a romper el piso de la cocina, unos 10 m²"></textarea></div>
+      <button class="btn btn-wa btn-bloque" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Enviar pedido por WhatsApp</button>
+      <p class="nota">Sin compromiso. Solo es una consulta.</p>
+    </form>
   </div>
 </section>
 
 <!-- ============ GLOSARIO + FAQ ============ -->
-<section id="preguntas">
+<section id="preguntas" class="gris">
   <div class="contenedor dos-col">
     <div>
       <div class="cabecera-seccion aparece">
         <span class="kicker">Mini diccionario de obra</span>
-        <h2 class="h-seccion" style="font-size:clamp(1.6rem,3vw,2.3rem)">Palabras que escucharás</h2>
+        <h2 class="h-seccion" style="font-size:clamp(1.5rem,5.5vw,2.3rem)">Palabras que escucharás</h2>
         <p class="lead">Para que entiendas al maestro de obra sin complicarte.</p>
       </div>
-      <div class="glosario aparece">
-        <div class="glos"><b>Desmonte</b><span>Los escombros, tierra y restos que quedan después de demoler o excavar.</span></div>
+      <p class="desliza">Desliza para ver más</p>
+      <div class="glosario carrusel-m">
+        <div class="glos"><b>Desmonte</b><span>Escombros, tierra y restos que quedan después de demoler o excavar.</span></div>
         <div class="glos"><b>Compactar</b><span>Apretar la tierra para que quede firme y no se hunda después.</span></div>
         <div class="glos"><b>Afirmado</b><span>Capa de piedra y tierra compactada que va debajo de pisos y pistas.</span></div>
         <div class="glos"><b>Vaciado</b><span>El momento en que se echa el concreto en el techo, losa o columna.</span></div>
         <div class="glos"><b>Picar</b><span>Romper parte de una pared o piso para pasar tubos o cables.</span></div>
-        <div class="glos"><b>m³ (metro cúbico)</b><span>Medida de volumen: una caja de 1 m de largo, 1 m de ancho y 1 m de alto.</span></div>
+        <div class="glos"><b>m³ (metro cúbico)</b><span>Una caja de 1 m de largo, 1 m de ancho y 1 m de alto.</span></div>
       </div>
     </div>
     <div>
       <div class="cabecera-seccion aparece">
         <span class="kicker">Preguntas frecuentes</span>
-        <h2 class="h-seccion" style="font-size:clamp(1.6rem,3vw,2.3rem)">Resolvemos tus dudas</h2>
+        <h2 class="h-seccion" style="font-size:clamp(1.5rem,5.5vw,2.3rem)">Resolvemos tus dudas</h2>
       </div>
-      <div class="faq aparece">
+      <div class="faq">
         <details open><summary>¿Necesito saber usar la máquina?</summary><p>No. Al entregarla te explicamos paso a paso cómo usarla de forma segura. Las máquinas livianas están pensadas para que cualquier persona pueda manejarlas.</p></details>
-        <details><summary>¿Por cuánto tiempo puedo alquilar?</summary><p>Por día, por semana o por mes. Si necesitas más tiempo, solo avísanos por WhatsApp y lo extendemos.</p></details>
-        <details><summary>¿Llevan la máquina hasta mi casa u obra?</summary><p>Sí, te la llevamos y la recogemos. El costo del traslado depende de la distancia y te lo indicamos en la cotización.</p></details>
+        <details><summary>¿Por cuánto tiempo puedo alquilar?</summary><p>Por día, por semana o por mes. Si necesitas más tiempo, avísanos por WhatsApp y lo extendemos.</p></details>
+        <details><summary>¿Llevan la máquina hasta mi casa u obra?</summary><p>Sí, te la llevamos y la recogemos. El traslado depende de la distancia y te lo indicamos en la cotización.</p></details>
         <details><summary>¿Qué necesito para alquilar?</summary><p>Tu DNI o RUC y la dirección donde se usará la máquina. Según el equipo, puede pedirse una garantía que se devuelve al terminar.</p></details>
         <details><summary>¿El combustible está incluido?</summary><p>La máquina se entrega con su tanque lleno y se devuelve igual. Te decimos cuánto consume para que calcules sin sorpresas.</p></details>
-        <details><summary>¿Emiten factura?</summary><p>Sí, emitimos boleta o factura electrónica.</p></details>
+        <details><summary>¿Emiten boleta o factura?</summary><p>Sí, emitimos boleta o factura electrónica.</p></details>
       </div>
     </div>
   </div>
@@ -327,146 +458,196 @@
 <section class="cta-final" id="contacto">
   <div class="contenedor">
     <div class="aparece">
-      <h2 class="h-display" style="font-size:clamp(2.2rem,5.5vw,4rem)">¡Solo llámanos!</h2>
-      <p class="lead" style="color:#ffe1e1;margin-top:.8rem">Déjanoslo a nosotros. Te respondemos rápido por llamada o WhatsApp y te ayudamos a elegir lo que necesitas.</p>
+      <h2 class="h-display" style="font-size:clamp(2.1rem,9vw,4rem)">¡Solo llámanos!</h2>
+      <p class="lead" style="color:#ffe1e1;margin-top:.6rem">Déjanoslo a nosotros. Te respondemos rápido y te ayudamos a elegir lo que necesitas.</p>
       <div class="telefonos">
-        <a class="tel" href="tel:+51913170982">913 170 982</a>
-        <a class="tel" href="tel:+51946252355">946 252 355</a>
+        <a class="tel" href="tel:+51913170982"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-tel"/></svg>913 170 982</a>
+        <a class="tel" href="tel:+51946252355"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-tel"/></svg>946 252 355</a>
       </div>
-      <div style="margin-top:1.4rem"><a class="btn btn-negro" data-wa="Hola Kastor 👋 Quiero una cotización." href="#">Escribir por WhatsApp</a></div>
     </div>
-    <img src="img/castor-silueta.png" alt="">
+    <img class="castor" src="img/castor-silueta.png" alt="" width="800" height="573">
   </div>
 </section>
 <div class="cinta"></div>
+</main>
 
 <!-- ============ PIE ============ -->
 <footer class="footer">
   <div class="contenedor">
     <div class="footer-grid">
       <div>
-        <img src="img/logo-kastor-negro.png" alt="Kastor · Construye y avanza">
-        <p style="margin-top:1rem;font-size:.92rem;max-width:30ch">Alquiler de maquinaria liviana y pesada, construcción y servicios generales.</p>
+        <img class="logo-pie" src="img/logo-horizontal-negro.png" alt="Kastor" width="1608" height="443">
+        <p style="margin-top:.9rem;font-size:.92rem;max-width:32ch">Construye y avanza. Alquiler de maquinaria liviana y pesada, construcción y servicios generales.</p>
       </div>
       <div><h4>Equipos</h4><ul><li><a href="#equipos">Maquinaria liviana</a></li><li><a href="#pesada">Maquinaria pesada</a></li><li><a href="#que-necesito">¿Qué necesito?</a></li></ul></div>
       <div><h4>Servicios</h4><ul><li><a href="#servicios">Demolición</a></li><li><a href="#servicios">Nivelación de terreno</a></li><li><a href="#servicios">Eliminación de desmonte</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="tel:+51913170982">📞 913 170 982</a></li><li><a href="tel:+51946252355">📞 946 252 355</a></li><li><a data-wa="Hola Kastor 👋" href="#">💬 WhatsApp</a></li></ul></div>
     </div>
-    <div class="footer-legal"><span>© <span id="anio"></span> Kastor · Construye y avanza</span><a href="branding.html">Manual de marca</a></div>
+    <div class="footer-legal"><span>© <span id="anio">2026</span> Kastor · Construye y avanza</span><a href="branding.html">Manual de marca</a></div>
   </div>
 </footer>
 
-<a class="wa-flotante" data-wa="Hola Kastor 👋 Quiero información." href="#" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M.06 24l1.69-6.16A11.87 11.87 0 0112.04 0C18.6 0 24 5.33 24 11.9a11.94 11.94 0 01-17.6 10.46L.06 24zm6.6-3.8a9.86 9.86 0 0015.33-8.3A9.9 9.9 0 002 11.93a9.8 9.8 0 001.66 5.47l-.99 3.62 3.98-1.04zM17.4 14.9c-.08-.13-.29-.21-.6-.36s-1.78-.88-2.05-.98-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.66.07a8.1 8.1 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.61l.45-.53a2 2 0 00.3-.5.55.55 0 000-.52c-.08-.15-.68-1.63-.93-2.24s-.5-.5-.68-.5h-.58a1.1 1.1 0 00-.8.37 3.35 3.35 0 00-1.04 2.49 5.8 5.8 0 001.22 3.08 13.3 13.3 0 005.1 4.5c.71.3 1.27.49 1.7.63a4.1 4.1 0 001.88.12 3.07 3.07 0 002.02-1.42 2.5 2.5 0 00.17-1.42z"/></svg></a>
+<!-- Botón flotante (escritorio) y barra de acción (celular) -->
+<a class="wa-flotante" data-wa="Hola Kastor 👋 Quiero información." href="#" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></a>
+<div class="barra-movil" id="barraMovil">
+  <a class="btn btn-negro" href="tel:+51913170982"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="btn btn-wa" data-wa="Hola Kastor 👋 Quiero alquilar una máquina." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.06 24l1.69-6.16A11.87 11.87 0 0112.04 0C18.6 0 24 5.33 24 11.9a11.94 11.94 0 01-17.6 10.46L.06 24zm6.6-3.8a9.86 9.86 0 0015.33-8.3A9.9 9.9 0 002 11.93a9.8 9.8 0 001.66 5.47l-.99 3.62 3.98-1.04zM17.4 14.9c-.08-.13-.29-.21-.6-.36s-1.78-.88-2.05-.98-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.66.07a8.1 8.1 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.61l.45-.53a2 2 0 00.3-.5.55.55 0 000-.52c-.08-.15-.68-1.63-.93-2.24s-.5-.5-.68-.5h-.58a1.1 1.1 0 00-.8.37 3.35 3.35 0 00-1.04 2.49 5.8 5.8 0 001.22 3.08 13.3 13.3 0 005.1 4.5c.71.3 1.27.49 1.7.63a4.1 4.1 0 001.88.12 3.07 3.07 0 002.02-1.42 2.5 2.5 0 00.17-1.42z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></symbol>
+</svg>
 
 <script>
+document.documentElement.classList.remove("sin-js");
 const WA = "51913170982";
 const wa = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const $ = (s) => document.querySelector(s);
 
-/* ---------- Datos: maquinaria liviana ---------- */
-const CATS = {energia:"Energía", demolicion:"Demolición y perforación", concreto:"Concreto", compactacion:"Compactación", corte:"Corte", aire:"Aire comprimido"};
+/* ---------- Datos ---------- */
+const CATS = {energia:"Energía", demolicion:"Demolición", concreto:"Concreto", compactacion:"Compactación", corte:"Corte", aire:"Aire"};
 const MAQ = [
-  {id:"compresora", n:"Compresora de aire", c:"aire", img:"compresora", s:"Genera <b>aire a presión</b> para pintar con pistola, inflar llantas, limpiar polvo o usar clavadoras neumáticas.", donde:["casa","obra"], facil:true},
-  {id:"gen-inv", n:"Generador silencioso (inverter)", c:"energia", img:"generador-inverter", s:"Te da <b>electricidad donde no hay luz</b>. Es silencioso y cuida equipos delicados: laptop, TV, refrigeradora o un evento.", donde:["casa"], facil:true},
-  {id:"gen-5500", n:"Generador 5500 W", c:"energia", img:"generador-5500", s:"<b>Luz para la obra</b>: conecta taladros, amoladoras, focos o una bomba de agua al mismo tiempo.", donde:["casa","obra"], facil:true},
+  {id:"compresora", n:"Compresora de aire", c:"aire", img:"compresora", s:"Genera <b>aire a presión</b> para pintar con pistola, inflar llantas, limpiar polvo o usar clavadoras.", donde:["casa","obra"], facil:true},
+  {id:"gen-inv", n:"Generador silencioso", c:"energia", img:"generador-inverter", s:"Te da <b>luz donde no hay</b>. Silencioso y seguro para equipos delicados: laptop, TV, refrigeradora o un evento.", donde:["casa"], facil:true},
+  {id:"gen-5500", n:"Generador 5500 W", c:"energia", img:"generador-5500", s:"<b>Luz para la obra</b>: conecta taladros, amoladoras, focos o una bomba de agua a la vez.", donde:["casa","obra"], facil:true},
   {id:"gen-alto", n:"Generador de alta potencia", c:"energia", img:"generador-7500", s:"Para cuando necesitas <b>más fuerza eléctrica</b>: varias herramientas grandes o una soldadora.", donde:["obra"], facil:true},
-  {id:"martillo-30", n:"Martillo rompepavimento", c:"demolicion", img:"martillo-30kg", s:"Rompe <b>pisos, veredas, losas y concreto grueso</b>. Se usa de pie y pega con mucha fuerza.", donde:["obra"]},
   {id:"martillo-dem", n:"Martillo demoledor", c:"demolicion", img:"martillo-demoledor", s:"Para <b>picar paredes, sacar mayólicas</b> y romper concreto de forma controlada.", donde:["casa","obra"], facil:true},
-  {id:"rotomartillo", n:"Rotomartillo", c:"demolicion", img:"rotomartillo", s:"<b>Perfora concreto y ladrillo</b> para poner anclajes, tubos o pernos. También sirve para picar.", donde:["casa","obra"], facil:true},
-  {id:"mezcladora", n:"Mezcladora de concreto (trompo)", c:"concreto", img:"mezcladora", s:"<b>Mezcla cemento, arena, piedra y agua</b> de forma pareja y rápida. Ideal para techos, losas y columnas.", donde:["casa","obra"], facil:true},
+  {id:"martillo-30", n:"Martillo rompepavimento", c:"demolicion", img:"martillo-30kg", s:"Rompe <b>pisos, veredas, losas y concreto grueso</b>. Se usa de pie y pega con mucha fuerza.", donde:["obra"]},
+  {id:"rotomartillo", n:"Rotomartillo", c:"demolicion", img:"rotomartillo", s:"<b>Perfora concreto y ladrillo</b> para anclajes, tubos o pernos. También sirve para picar.", donde:["casa","obra"], facil:true},
+  {id:"mezcladora", n:"Mezcladora (trompo)", c:"concreto", img:"mezcladora", s:"<b>Mezcla cemento, arena, piedra y agua</b> parejo y rápido. Ideal para techos, losas y columnas.", donde:["casa","obra"], facil:true},
   {id:"vibrador", n:"Vibrador de concreto", c:"concreto", img:"vibrador-concreto", s:"Saca las <b>burbujas de aire del concreto</b> recién vaciado para que quede firme y sin huecos.", donde:["obra"], facil:true},
   {id:"plancha", n:"Plancha compactadora", c:"compactacion", img:"plancha-compactadora", s:"<b>Aplana y endurece</b> tierra, arena o afirmado antes de poner piso, adoquines o veredas.", donde:["casa","obra"], facil:true},
   {id:"apisonador", n:"Apisonador (canguro)", c:"compactacion", img:"apisonador", s:"Compacta tierra en <b>espacios angostos</b>: zanjas, bordes y alrededor de tuberías.", donde:["obra"]},
   {id:"rodillo-m", n:"Rodillo compactador manual", c:"compactacion", img:"rodillo-zanjero", s:"Compacta <b>áreas medianas</b>: patios, estacionamientos, pistas internas y bases.", donde:["obra"]},
-  {id:"cortadora", n:"Cortadora de concreto y asfalto", c:"corte", img:"cortadora-concreto", s:"Hace <b>cortes rectos y limpios</b> en pisos de concreto o pistas antes de romperlos.", donde:["obra"]},
+  {id:"cortadora", n:"Cortadora de concreto", c:"corte", img:"cortadora-concreto", s:"Hace <b>cortes rectos y limpios</b> en pisos de concreto o asfalto antes de romperlos.", donde:["obra"]},
   {id:"motosierra", n:"Motosierra", c:"corte", img:"motosierra", s:"Corta <b>troncos, ramas y madera</b>. Muy útil para limpiar terrenos y jardines grandes.", donde:["casa","obra"]},
 ];
 const PESADA = [
-  {n:"Retroexcavadora", img:"retroexcavadora", s:"Excava zanjas, carga tierra, demuele y nivela. Es la <b>todo terreno</b> de la obra.", t:["Excavación","Carguío","Demolición"]},
+  {n:"Retroexcavadora", img:"retroexcavadora", s:"Excava zanjas, carga tierra, demuele y nivela. La <b>todo terreno</b> de la obra.", t:["Excavación","Carguío"]},
   {n:"Volquete", img:"volquete", s:"Transporta y <b>elimina desmonte</b>, tierra, arena o piedra fuera de tu obra.", t:["Eliminación","Transporte"]},
-  {n:"Rodillo compactador", img:"rodillo-cat", s:"Compacta <b>pistas, caminos y grandes áreas</b> para que el suelo quede firme y parejo.", t:["Pistas","Caminos","Afirmado"]},
+  {n:"Rodillo compactador", img:"rodillo-cat", s:"Compacta <b>pistas, caminos y grandes áreas</b> para que el suelo quede firme.", t:["Pistas","Afirmado"]},
 ];
 const SERV = [
-  {i:"🔨", n:"Demolición", s:"Derribamos paredes, techos, pisos o construcciones completas de forma segura.", l:["Demolición parcial o total","Picado de pisos y muros","Retiro de escombros"]},
-  {i:"🚜", n:"Nivelación y aplanamiento", s:"Dejamos tu terreno parejo y listo para construir encima.", l:["Nivelación de terrenos","Relleno y compactado","Preparación de afirmado"]},
-  {i:"⛏️", n:"Excavación y zanjas", s:"Abrimos espacio para cimientos, cisternas, desagües o tuberías.", l:["Cimientos y zapatas","Zanjas para tuberías","Cisternas y pozos"]},
-  {i:"🚛", n:"Eliminación de desmonte", s:"Nos llevamos los escombros y la tierra que sobra en tu obra.", l:["Carguío con máquina","Transporte en volquete","Obra limpia al terminar"]},
-  {i:"🪚", n:"Corte de concreto y asfalto", s:"Cortes precisos en pisos y pistas para instalaciones o reparaciones.", l:["Corte de losas y veredas","Corte de pistas","Aperturas para tuberías"]},
-  {i:"🌿", n:"Limpieza de terrenos", s:"Retiramos maleza, árboles, basura y piedras para que puedas empezar.", l:["Desbroce y desmalezado","Tala de árboles","Retiro de basura"]},
+  {i:"🔨", n:"Demolición", s:"Derribamos paredes, techos, pisos o construcciones completas, con seguridad.", l:["Parcial o total","Picado de pisos y muros","Retiro de escombros"]},
+  {i:"🚜", n:"Nivelación y aplanamiento", s:"Dejamos tu terreno parejo y listo para construir encima.", l:["Nivelación","Relleno y compactado","Afirmado"]},
+  {i:"⛏️", n:"Excavación y zanjas", s:"Abrimos espacio para cimientos, cisternas, desagües o tuberías.", l:["Cimientos","Zanjas","Cisternas"]},
+  {i:"🚛", n:"Eliminación de desmonte", s:"Nos llevamos los escombros y la tierra que sobra en tu obra.", l:["Carguío","Volquete","Obra limpia"]},
+  {i:"🪚", n:"Corte de concreto y asfalto", s:"Cortes precisos en pisos y pistas para instalaciones o reparaciones.", l:["Losas y veredas","Pistas","Tuberías"]},
+  {i:"🌿", n:"Limpieza de terrenos", s:"Retiramos maleza, árboles, basura y piedras para que puedas empezar.", l:["Desmalezado","Tala","Retiro de basura"]},
 ];
 const TAREAS = [
-  {e:"🧱", t:"Romper un piso o una pared", m:["martillo-dem","martillo-30"], tip:"Para pisos gruesos o veredas usa el rompepavimento. Para paredes y mayólicas, el demoledor es más cómodo. Usa lentes y guantes."},
-  {e:"💡", t:"No hay luz en mi casa u obra", m:["gen-inv","gen-5500"], tip:"Para casa o equipos delicados elige el inverter (es silencioso). Para herramientas de obra, el de 5500 W. Nunca lo prendas dentro de un cuarto cerrado."},
-  {e:"🎨", t:"Pintar, inflar o usar aire a presión", m:["compresora"], tip:"Dinos qué herramienta vas a conectar (pistola de pintura, clavadora, etc.) y te confirmamos si la compresora alcanza."},
-  {e:"🪣", t:"Preparar concreto para techo o losa", m:["mezcladora","vibrador"], tip:"El día del vaciado, la mezcladora y el vibrador trabajan juntos: uno mezcla y el otro deja el concreto firme."},
-  {e:"🏗️", t:"Compactar tierra o afirmado", m:["plancha","apisonador"], tip:"Para áreas abiertas (patio, vereda) usa la plancha. Para zanjas o bordes angostos, el canguro."},
+  {e:"🧱", t:"Romper un piso o pared", m:["martillo-dem","martillo-30"], tip:"Para pisos gruesos o veredas usa el rompepavimento. Para paredes y mayólicas, el demoledor es más cómodo. Usa lentes y guantes."},
+  {e:"💡", t:"No hay luz", m:["gen-inv","gen-5500"], tip:"Para casa o equipos delicados elige el silencioso. Para herramientas de obra, el de 5500 W. Nunca lo prendas dentro de un cuarto cerrado."},
+  {e:"🎨", t:"Pintar o usar aire a presión", m:["compresora"], tip:"Dinos qué herramienta vas a conectar (pistola, clavadora, etc.) y te confirmamos si la compresora alcanza."},
+  {e:"🪣", t:"Preparar concreto", m:["mezcladora","vibrador"], tip:"El día del vaciado trabajan juntos: la mezcladora prepara el concreto y el vibrador lo deja firme."},
+  {e:"🏗️", t:"Compactar tierra", m:["plancha","apisonador"], tip:"Para áreas abiertas (patio, vereda) usa la plancha. Para zanjas o bordes angostos, el canguro."},
   {e:"🔩", t:"Hacer huecos en concreto", m:["rotomartillo"], tip:"Dinos el diámetro del hueco y te enviamos las brocas adecuadas."},
   {e:"✂️", t:"Cortar concreto o asfalto", m:["cortadora"], tip:"Cortar antes de romper deja bordes limpios y evita dañar lo que no quieres romper."},
-  {e:"🌳", t:"Cortar árboles o limpiar terreno", m:["motosierra"], tip:"Si el terreno es grande, también podemos hacer la limpieza por ti con nuestro servicio de limpieza de terrenos."},
+  {e:"🌳", t:"Cortar árboles o limpiar terreno", m:["motosierra"], tip:"Si el terreno es grande, también podemos hacer la limpieza por ti con nuestro servicio."},
 ];
-
 const byId = Object.fromEntries(MAQ.map(m => [m.id, m]));
 const lugar = d => d.map(x => x === "casa" ? '<span class="etq">🏠 Casa</span>' : '<span class="etq">🏗️ Obra</span>').join("");
+const sinB = s => s.replace(/<\/?b>/g, "");
 
-/* Catálogo */
-const grid = document.getElementById("gridMaq");
+/* ---------- Catálogo ---------- */
+const grid = $("#gridMaq");
 function pintaMaq(cat){
   grid.innerHTML = MAQ.filter(m => cat === "todo" || m.c === cat).map(m => `
     <article class="maq tarjeta">
-      <div class="foto"><span class="cat">${CATS[m.c]}</span><img src="img/maq/${m.img}.webp" alt="${m.n}"></div>
+      <div class="foto"><span class="cat">${CATS[m.c]}</span><img decoding="async" src="img/maq/${m.img}.webp" alt="${m.n}"></div>
       <div class="cuerpo">
         <h3>${m.n}</h3>
         <p class="sirve">${m.s}</p>
-        <div class="etiquetas">${lugar(m.donde)}${m.facil ? '<span class="etq facil">👍 Fácil de usar</span>' : ""}</div>
-        <a class="btn btn-rojo" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero alquilar: ${m.n}. ¿Me pasan precio y disponibilidad?`)}">Cotizar este equipo</a>
+        <div class="etiquetas">${lugar(m.donde)}${m.facil ? '<span class="etq facil">👍 Fácil</span>' : ""}</div>
+        <a class="btn btn-rojo" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero alquilar: ${m.n}. ¿Me pasan precio y disponibilidad?`)}">Cotizar</a>
       </div>
     </article>`).join("");
 }
-const filtros = document.getElementById("filtros");
-filtros.innerHTML = [["todo","Todos"], ...Object.entries(CATS)].map(([k,v],i) => `<button class="chip${i?"":" activo"}" data-cat="${k}" role="tab">${v}</button>`).join("");
+const cuenta = c => c === "todo" ? MAQ.length : MAQ.filter(m => m.c === c).length;
+const filtros = $("#filtros");
+filtros.innerHTML = [["todo","Todos"], ...Object.entries(CATS)].map(([k,v],i) =>
+  `<button class="chip${i ? "" : " activo"}" data-cat="${k}" aria-pressed="${!i}">${v} <span class="n">${cuenta(k)}</span></button>`).join("");
 filtros.addEventListener("click", e => {
-  const b = e.target.closest(".chip"); if(!b) return;
-  filtros.querySelectorAll(".chip").forEach(c => c.classList.toggle("activo", c === b));
+  const b = e.target.closest(".chip"); if (!b) return;
+  filtros.querySelectorAll(".chip").forEach(c => { c.classList.toggle("activo", c === b); c.setAttribute("aria-pressed", c === b); });
+  b.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
   pintaMaq(b.dataset.cat);
+  const top = $("#filtrosWrap").getBoundingClientRect().top;
+  if (top < 0 || top > innerHeight * .5) $("#equipos .grid-maq").scrollIntoView({behavior:"smooth"});
 });
 pintaMaq("todo");
+new IntersectionObserver(([e]) => $("#filtrosWrap").classList.toggle("pegado", e.intersectionRatio < 1), {rootMargin:`-${parseInt(getComputedStyle(document.documentElement).getPropertyValue("--alto-header")) + 1}px 0px 0px 0px`, threshold:[1]}).observe($("#filtrosWrap"));
 
-/* Asistente */
-const tareas = document.getElementById("tareas"), resp = document.getElementById("respuesta");
+/* ---------- Asistente ---------- */
+const tareas = $("#tareas"), resp = $("#respuesta");
 tareas.innerHTML = TAREAS.map((t,i) => `<button class="tarea" aria-pressed="false" data-i="${i}"><span class="emo">${t.e}</span>${t.t}</button>`).join("");
 tareas.addEventListener("click", e => {
-  const b = e.target.closest(".tarea"); if(!b) return;
+  const b = e.target.closest(".tarea"); if (!b) return;
   tareas.querySelectorAll(".tarea").forEach(x => x.setAttribute("aria-pressed", x === b));
   const t = TAREAS[b.dataset.i], ms = t.m.map(id => byId[id]);
   resp.innerHTML = `
-    <p class="resp-titulo">Para “${t.t.toLowerCase()}” te recomendamos</p>
+    <p class="resp-titulo">${t.e} ${t.t}: te recomendamos</p>
     <div class="resp-maquinas">${ms.map(m => `
       <div class="resp-maq"><div class="foto"><img src="img/maq/${m.img}.webp" alt="${m.n}"></div>
-      <div><h4>${m.n}</h4><p>${m.s.replace(/<\/?b>/g,"")}</p></div></div>`).join("")}</div>
+      <div><h4>${m.n}</h4><p>${sinB(m.s)}</p></div></div>`).join("")}</div>
     <div class="consejo"><span>💡</span><span><b>Consejo Kastor:</b> ${t.tip}</span></div>
-    <a class="btn btn-wa" style="width:100%" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero ${t.t.toLowerCase()}. Me recomendaron: ${ms.map(m=>m.n).join(" y ")}. ¿Me cotizan?`)}">Cotizar por WhatsApp</a>`;
-  if (innerWidth < 900) resp.scrollIntoView({behavior:"smooth", block:"start"});
+    <a class="btn btn-wa btn-bloque" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero: ${t.t.toLowerCase()}. Me interesa: ${ms.map(m=>m.n).join(" y ")}. ¿Me cotizan?`)}"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>`;
+  if (innerWidth < 1000) resp.scrollIntoView({behavior:"smooth", block:"start"});
 });
 
-/* Servicios y pesada */
-document.getElementById("gridServ").innerHTML = SERV.map(s => `
-  <article class="serv tarjeta aparece"><div class="ico">${s.i}</div><h3>${s.n}</h3><p>${s.s}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
-document.getElementById("gridPes").innerHTML = PESADA.map(p => `
-  <article class="pes aparece"><div class="foto"><img src="img/maq/${p.img}.webp" alt="${p.n}"></div>
+/* ---------- Servicios y pesada ---------- */
+$("#gridServ").innerHTML = SERV.map(s => `
+  <article class="serv tarjeta"><div class="ico" aria-hidden="true">${s.i}</div><h3>${s.n}</h3><p>${s.s}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
+$("#gridPes").innerHTML = PESADA.map(p => `
+  <article class="pes"><div class="foto"><img decoding="async" src="img/maq/${p.img}.webp" alt="${p.n}"></div>
   <div class="cuerpo"><h3>${p.n}</h3><p>${p.s}</p><div class="etiquetas">${p.t.map(x=>`<span class="etq">${x}</span>`).join("")}<span class="etq">👷 Con operador</span></div>
   <a class="btn btn-borde" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero cotizar ${p.n} con operador.`)}">Cotizar con operador</a></div></article>`).join("");
 
-/* WhatsApp genérico */
+/* ---------- Cotizador ---------- */
+const sel = $("#fEquipo");
+sel.innerHTML = `<option value="">Elige un equipo o servicio…</option>
+  <optgroup label="Maquinaria liviana">${MAQ.map(m => `<option>${m.n}</option>`).join("")}</optgroup>
+  <optgroup label="Servicios">${SERV.map(s => `<option>Servicio: ${s.n}</option>`).join("")}</optgroup>
+  <optgroup label="Maquinaria pesada (con operador)">${PESADA.map(p => `<option>${p.n} con operador</option>`).join("")}</optgroup>
+  <option>No sé, necesito asesoría</option>`;
+const fDias = $("#fDias"), fFecha = $("#fFecha");
+fFecha.min = new Date().toISOString().slice(0,10);
+document.querySelectorAll(".contador button").forEach(b => b.addEventListener("click", () => {
+  fDias.value = Math.min(365, Math.max(1, (parseInt(fDias.value) || 1) + +b.dataset.d));
+}));
+$("#formCotiza").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!sel.value) { sel.focus(); sel.style.borderColor = "var(--rojo)"; return; }
+  const v = id => $(id).value.trim();
+  const fecha = v("#fFecha") ? new Date(v("#fFecha") + "T12:00").toLocaleDateString("es-PE", {weekday:"long", day:"numeric", month:"long"}) : "";
+  const lineas = ["Hola Kastor 👋 Quiero cotizar:", `🔧 ${sel.value}`, `📅 ${fDias.value} día(s)${fecha ? " desde el " + fecha : ""}`];
+  if (v("#fLugar")) lineas.push(`📍 ${v("#fLugar")}`);
+  if (v("#fNota")) lineas.push(`📝 ${v("#fNota")}`);
+  if (v("#fNombre")) lineas.push(`🙋 ${v("#fNombre")}`);
+  window.open(wa(lineas.join("\n")), "_blank", "noopener");
+});
+sel.addEventListener("change", () => sel.style.borderColor = "");
+
+/* ---------- WhatsApp genérico ---------- */
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = wa(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
 
-/* Menú móvil */
-const nav = document.getElementById("nav"), mb = document.getElementById("menuBtn");
-mb.addEventListener("click", () => { const o = nav.classList.toggle("abierto"); mb.setAttribute("aria-expanded", o); });
-nav.addEventListener("click", e => { if (e.target.closest("a")) { nav.classList.remove("abierto"); mb.setAttribute("aria-expanded", false); } });
+/* ---------- Menú móvil ---------- */
+const nav = $("#nav"), mb = $("#menuBtn"), velo = $("#velo");
+const menu = (abrir) => { nav.classList.toggle("abierto", abrir); velo.classList.toggle("visible", abrir); mb.setAttribute("aria-expanded", abrir); mb.setAttribute("aria-label", abrir ? "Cerrar menú" : "Abrir menú"); };
+mb.addEventListener("click", () => menu(!nav.classList.contains("abierto")));
+velo.addEventListener("click", () => menu(false));
+nav.addEventListener("click", e => { if (e.target.closest("a")) menu(false); });
+addEventListener("keydown", e => { if (e.key === "Escape") menu(false); });
 
-/* Aparición al hacer scroll */
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), {threshold:.12});
+/* ---------- Barra inferior: aparece después del hero ---------- */
+const barra = $("#barraMovil");
+new IntersectionObserver(([e]) => barra.classList.toggle("visible", !e.isIntersecting), {threshold:0}).observe($(".hero-ctas"));
+
+/* ---------- Aparición ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), {threshold:.1, rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".aparece").forEach(el => io.observe(el));
-document.getElementById("anio").textContent = new Date().getFullYear();
+$("#anio").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

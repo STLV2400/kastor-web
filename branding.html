@@ -7,6 +7,8 @@
 <meta name="description" content="Manual de identidad visual de Kastor: logo, colores, tipografía, elementos gráficos, tono de voz y aplicaciones.">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:image" content="https://stlv2400.github.io/kastor-web/img/og-kastor.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
@@ -28,7 +30,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
 .portada p{color:#cfcfcf;font-size:1.1rem;max-width:46ch;margin-top:1.2rem}
 .portada .logo-p{background:#000;border-radius:28px;padding:2rem;box-shadow:0 0 0 1px #222,var(--sombra-l)}
 .indice{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
-.indice a{font-size:.82rem;font-weight:700;text-decoration:none;border:1px solid #333;padding:.45rem .8rem;border-radius:999px;color:#ddd}
+.indice a{font-size:.82rem;font-weight:700;text-decoration:none;border:1px solid #333;padding:.45rem .8rem;min-height:42px;display:inline-flex;align-items:center;border-radius:999px;color:#ddd}
 .indice a:hover{border-color:var(--rojo);color:#fff}
 @media (max-width:860px){.portada .contenedor{grid-template-columns:1fr}.portada .logo-p{max-width:420px}}
 
@@ -46,9 +48,23 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
 @media (max-width:520px){.esencia,.personalidad{grid-template-columns:1fr}}
 
 /* Logo */
-.logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.lienzo{border-radius:var(--radio);display:grid;place-items:center;padding:clamp(1.5rem,4vw,3rem);position:relative;min-height:280px}
-.lienzo img{max-height:260px;width:auto}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ver{position:absolute;top:.8rem;left:.8rem;width:30px;height:30px;border-radius:8px;background:var(--rojo);color:#fff;font-weight:900;display:grid;place-items:center;font-size:.9rem;flex:none}
+.que-version{margin-top:2rem;background:#fff;border-radius:var(--radio);padding:clamp(1.2rem,3vw,2rem);border:1px solid var(--concreto-2);box-shadow:var(--sombra)}
+.que-version h3{font-size:clamp(1.3rem,4vw,1.7rem);letter-spacing:0;margin-bottom:.6rem}
+.que-version h3 span{display:inline-block;font-size:.55em;background:var(--amarillo);padding:.2rem .5rem;border-radius:6px;vertical-align:middle;margin-left:.4rem}
+.que-version>p{color:#444;max-width:70ch}
+.tabla-ver{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:1.2rem 0}
+.tv{display:flex;gap:.8rem;align-items:flex-start;background:var(--concreto);border-radius:var(--radio-s);padding:1rem}
+.tv .ver{position:static}
+.tv b{display:block}
+.tv small{display:block;font-weight:700;color:var(--rojo);font-size:.8rem;margin:.15rem 0 .3rem}
+.tv em{font-style:normal;font-size:.88rem;color:#444}
+.que-version .tip{font-size:.9rem;background:#FFF8D6;border-left:4px solid var(--amarillo);padding:.8rem 1rem;border-radius:8px;color:#333}
+@media (max-width:1000px){.logos{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.tabla-ver{grid-template-columns:1fr}}
+.lienzo{border-radius:var(--radio);display:grid;place-items:center;padding:3rem 1.2rem 2.6rem;position:relative;min-height:clamp(190px,40vw,270px)}
+.lienzo img{max-height:220px;width:auto;max-width:100%}
 .lienzo .rot{position:absolute;left:1rem;bottom:.8rem;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .b-blanco{background:#fff;border:1px solid var(--concreto-2)}
 .b-negro{background:#000;color:#fff}
@@ -97,7 +113,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
 .especimen{background:var(--negro);color:#fff;border-radius:var(--radio);padding:2rem;overflow:hidden}
 .especimen .aa{font-size:clamp(6rem,14vw,10rem);font-weight:900;line-height:.9;letter-spacing:-.04em}
 .especimen .aa span{color:var(--rojo)}
-.especimen p{font-size:1.05rem;letter-spacing:.08em;margin-top:1rem;color:#d0d0d0;word-break:break-all}
+.especimen p{font-size:clamp(.78rem,3.2vw,1.05rem);letter-spacing:.04em;margin-top:1rem;color:#d0d0d0;overflow-wrap:anywhere}
 .pesos{display:grid;gap:.6rem;margin-top:1.4rem}
 .pesos div{display:flex;justify-content:space-between;border-bottom:1px solid #2a2a2a;padding-bottom:.5rem}
 .escala{display:grid;gap:1.1rem}
@@ -182,7 +198,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
 
 <header class="header">
   <div class="contenedor">
-    <a class="marca" href="index.html"><img src="img/isotipo-kastor.png" alt=""><span><b>KASTOR</b><small>MANUAL DE MARCA</small></span></a>
+    <a class="marca" href="index.html"><img src="img/logo-horizontal.png" alt="Kastor"></a>
     <a class="btn btn-negro" href="index.html" style="padding:.7rem 1.1rem;font-size:.88rem">← Sitio web</a>
   </div>
 </header>
@@ -233,10 +249,25 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
   <div class="contenedor">
     <div class="titulo-sec"><span class="num">02 · LOGOTIPO</span><h2>Nuestro logo</h2><p>Siempre se usa uno de estos archivos originales. Nunca se redibuja ni se escribe “Kastor” con otra letra para reemplazarlo.</p></div>
     <div class="logos">
-      <div class="lienzo b-blanco aparece"><img src="img/logo-kastor.png" alt="Logo principal"><span class="rot">Principal · fondos claros</span></div>
-      <div class="lienzo b-negro aparece"><img src="img/logo-kastor-negro.png" alt="Logo negativo"><span class="rot">Negativo · fondos oscuros</span></div>
-      <div class="lienzo b-blanco aparece"><img src="img/isotipo-kastor.png" alt="Isotipo" style="max-height:180px"><span class="rot">Isotipo · redes, favicon, sellos</span></div>
+      <div class="lienzo b-blanco aparece"><span class="ver">A</span><img src="img/logo-kastor.png" alt="Logo completo"><span class="rot">Completo con lema · tamaños grandes</span></div>
+      <div class="lienzo b-negro aparece"><span class="ver">A</span><img src="img/logo-kastor-negro.png" alt="Logo completo negativo"><span class="rot">Completo negativo · fondos oscuros</span></div>
+      <div class="lienzo b-blanco aparece"><span class="ver">B</span><img src="img/logo-sin-lema.png" alt="Logo sin lema" style="max-height:200px"><span class="rot">Sin lema · tamaños medianos</span></div>
+      <div class="lienzo b-blanco aparece"><span class="ver">C</span><img src="img/logo-horizontal.png" alt="Logo horizontal" style="max-height:90px"><span class="rot">Horizontal · web, encabezados, vehículos</span></div>
+      <div class="lienzo b-negro aparece"><span class="ver">C</span><img src="img/logo-horizontal-negro.png" alt="Logo horizontal negativo" style="max-height:90px"><span class="rot">Horizontal negativo</span></div>
+      <div class="lienzo b-blanco aparece"><span class="ver">D</span><img src="img/isotipo-kastor.png" alt="Isotipo" style="max-height:150px"><span class="rot">Isotipo · ícono, favicon, perfil</span></div>
       <div class="lienzo b-amarillo aparece"><img src="img/castor-silueta.png" alt="Silueta castor" style="max-height:200px"><span class="rot">Silueta castor · decorativo</span></div>
+    </div>
+
+    <div class="que-version aparece">
+      <h3>¿Qué versión uso? <span>La regla del lema</span></h3>
+      <p>El lema <b>“Construye y avanza”</b> es parte del logo, pero sus letras son pequeñas. Si el logo se usa chico, el lema se vuelve ilegible y el logo se ve descuidado. Por eso <b>el lema solo va cuando hay espacio</b>.</p>
+      <div class="tabla-ver">
+        <div class="tv"><span class="ver">A</span><div><b>Completo con lema</b><small>160 px o más de ancho · impreso de 4 cm o más</small><em>Portadas, tarjetas, banners, letreros, documentos.</em></div></div>
+        <div class="tv"><span class="ver">B</span><div><b>Sin lema</b><small>Entre 80 y 160 px · impreso de 2 a 4 cm</small><em>Sellos, firmas de correo, facturas, etiquetas.</em></div></div>
+        <div class="tv"><span class="ver">C</span><div><b>Horizontal</b><small>Espacios bajos y anchos (24 a 80 px de alto)</small><em>Menú de la web, pie de página, vehículos, espalda de polos.</em></div></div>
+        <div class="tv"><span class="ver">D</span><div><b>Isotipo</b><small>Espacios cuadrados o muy pequeños (desde 32 px)</small><em>Foto de perfil de WhatsApp y redes, ícono de la web, bordados.</em></div></div>
+      </div>
+      <p class="tip">💡 Cuando el lema no va en el logo, puedes escribirlo aparte como texto normal (por ejemplo, en un título), en Montserrat y a un tamaño legible.</p>
     </div>
 
     <div class="anatomia">
@@ -253,13 +284,14 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
           <li><span><b>La K roja.</b> Inicial de la marca, representa fuerza y avance. Su corte diagonal inspira los elementos gráficos.</span></li>
           <li><span><b>El castor.</b> Nuestro personaje: el constructor. Siempre mira hacia la derecha, hacia adelante.</span></li>
           <li><span><b>KASTOR.</b> Nombre en Montserrat Black, siempre en mayúsculas.</span></li>
-          <li><span><b>Construye y avanza.</b> Nuestro lema. Puede omitirse cuando el logo es muy pequeño.</span></li>
+          <li><span><b>Construye y avanza.</b> Nuestro lema. Solo va cuando el logo mide 160 px o más de ancho (4 cm impreso).</span></li>
         </ol>
         <p style="margin-top:1.2rem;color:#444"><b>Espacio de respeto (X):</b> alrededor del logo deja libre, como mínimo, la altura de la letra “K” de la palabra KASTOR. Ningún texto o imagen puede entrar en esa zona.</p>
         <div class="tamanos">
-          <div><img src="img/logo-kastor.png" style="height:110px" alt=""><br>Impreso ≥ 3 cm</div>
-          <div><img src="img/logo-kastor.png" style="height:70px" alt=""><br>Digital ≥ 120 px</div>
-          <div><img src="img/isotipo-kastor.png" style="height:36px" alt=""><br>Isotipo ≥ 32 px</div>
+          <div><img src="img/logo-kastor.png" style="height:120px" alt=""><br>A · ≥ 160 px / 4 cm</div>
+          <div><img src="img/logo-sin-lema.png" style="height:70px" alt=""><br>B · 80–160 px</div>
+          <div><img src="img/logo-horizontal.png" style="height:30px" alt=""><br>C · alto 24–80 px</div>
+          <div><img src="img/isotipo-kastor.png" style="height:32px" alt=""><br>D · ≥ 32 px</div>
         </div>
       </div>
     </div>
@@ -272,6 +304,9 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
     <div class="descargas">
       <a class="btn btn-negro" href="img/logo-kastor.png" download>⬇ Logo principal (PNG)</a>
       <a class="btn btn-negro" href="img/logo-kastor-negro.png" download>⬇ Logo negativo (PNG)</a>
+      <a class="btn btn-negro" href="img/logo-sin-lema.png" download>⬇ Sin lema (PNG)</a>
+      <a class="btn btn-negro" href="img/logo-horizontal.png" download>⬇ Horizontal (PNG)</a>
+      <a class="btn btn-negro" href="img/logo-horizontal-negro.png" download>⬇ Horizontal negativo (PNG)</a>
       <a class="btn btn-borde" href="img/isotipo-kastor.png" download>⬇ Isotipo (PNG)</a>
     </div>
   </div>
@@ -422,7 +457,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
       </div>
       <div class="app aparece" style="grid-column:1/-1"><h4>Vehículo de reparto</h4>
         <div class="vehiculo">
-          <div class="carr"><img src="img/logo-kastor.png" alt=""><b>ALQUILER<br>913 170 982</b></div>
+          <div class="carr"><img src="img/logo-horizontal.png" alt=""><b>ALQUILER<br>913 170 982</b></div>
           <div class="rueda" style="left:12%"></div><div class="rueda" style="right:12%"></div>
         </div>
       </div>
@@ -432,7 +467,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-
 
 <footer class="footer">
   <div class="contenedor" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem">
-    <img src="img/logo-kastor-negro.png" alt="Kastor">
+    <img src="img/logo-horizontal-negro.png" alt="Kastor" style="width:200px">
     <div style="font-size:.9rem">Manual de marca Kastor · v1.0<br><a href="index.html" style="color:var(--amarillo)">Ver el sitio web →</a></div>
   </div>
 </footer>
