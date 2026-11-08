@@ -36,10 +36,15 @@ p{text-wrap:pretty}
 
 /* Cinta de seguridad */
 .cinta{height:12px;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 16px,var(--negro) 16px 32px)}
-.cinta-texto{background:var(--amarillo);border-block:5px solid var(--negro);overflow:hidden;white-space:nowrap;padding:.5rem 0}
-.cinta-texto .pista{display:inline-flex;gap:1.8rem;animation:desliza 32s linear infinite;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem}
-.cinta-texto .pista span{display:inline-flex;align-items:center;gap:1.8rem}
-.cinta-texto .pista span::after{content:"";width:26px;height:14px;background:repeating-linear-gradient(-45deg,var(--negro) 0 5px,transparent 5px 10px)}
+.cinta-texto{position:relative;width:106%;margin-left:-3%;transform:rotate(-1.2deg);color:var(--negro);overflow:hidden;white-space:nowrap;padding:1.05rem 0;
+  background:linear-gradient(180deg,rgba(255,255,255,.35) 0,rgba(255,255,255,0) 45%,rgba(0,0,0,.07) 100%),var(--amarillo);
+  box-shadow:0 14px 28px -12px rgba(0,0,0,.65);z-index:2}
+.cinta-texto::before,.cinta-texto::after{content:"";position:absolute;left:0;right:0;height:9px;background:repeating-linear-gradient(-45deg,var(--negro) 0 11px,var(--amarillo) 11px 22px)}
+.cinta-texto::before{top:0}
+.cinta-texto::after{bottom:0}
+.cinta-texto .pista{display:inline-flex;align-items:center;animation:desliza 36s linear infinite;font-weight:900;text-transform:uppercase;letter-spacing:.09em;font-size:clamp(.82rem,2.3vw,1.02rem);line-height:1}
+.cinta-texto .pista span{display:inline-flex;align-items:center;gap:1.4rem;padding-right:1.4rem}
+.cinta-texto .pista span::after{content:"";width:9px;height:9px;background:var(--rojo);transform:rotate(45deg);box-shadow:0 0 0 2px var(--negro)}
 @keyframes desliza{to{transform:translateX(-50%)}}
 
 /* Botones (mín. 48px de alto para dedos) */
@@ -57,7 +62,8 @@ p{text-wrap:pretty}
 .btn svg{width:20px;height:20px;flex:none}
 
 /* Encabezado */
-.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--concreto-2)}
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--concreto-2);transition:box-shadow .2s}
+.header.con-sombra{box-shadow:0 8px 24px -14px rgba(0,0,0,.35)}
 .header .contenedor{display:flex;align-items:center;justify-content:space-between;gap:.75rem;height:var(--alto-header)}
 .marca{display:flex;align-items:center;text-decoration:none;flex:none}
 .marca img{height:40px;width:auto}
