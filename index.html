@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kastor · Alquiler de maquinaria liviana y pesada | Construye y avanza</title>
+<meta name="description" content="Alquila compresoras, generadores, martillos demoledores, mezcladoras, planchas compactadoras y más para tu casa u obra. También maquinaria pesada y servicios de demolición, nivelación y movimiento de tierras. Llámanos al 913 170 982.">
+<meta name="theme-color" content="#E60F16">
+<meta property="og:title" content="Kastor · Alquiler de maquinaria">
+<meta property="og:description" content="Máquinas para tu casa u obra, entregadas donde las necesites. Construye y avanza.">
+<meta property="og:image" content="img/logo-kastor.png">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/kastor.css">
+<style>
+/* ---------- HERO ---------- */
+.hero{position:relative;background:var(--negro);color:#fff;padding:clamp(3rem,7vw,5.5rem) 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 400px at 85% 30%,rgba(230,15,22,.35),transparent 70%),
+  linear-gradient(115deg,transparent 0 55%,rgba(255,255,255,.03) 55% 100%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center}
+.hero h1 .linea{display:block}
+.hero h1 .rojo{color:var(--rojo)}
+.hero .lead{color:#d0d0d0;margin:1.4rem 0 2rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-ctas .btn-borde{color:#fff}
+.hero-datos{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.4rem;padding-bottom:3rem}
+.hero-datos div{display:flex;align-items:center;gap:.65rem;font-weight:700;font-size:.92rem;color:#e6e6e6}
+.hero-datos i{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-style:normal;font-size:1.15rem}
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:560px;justify-self:center;width:100%}
+.hero-visual .disco{position:absolute;inset:8%;border-radius:50%;background:var(--rojo);box-shadow:0 0 0 18px rgba(230,15,22,.15),0 0 0 40px rgba(230,15,22,.07)}
+.hero-visual .disco::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 14px,transparent 14px 28px)}
+.hero-visual img{position:absolute;filter:drop-shadow(0 25px 25px rgba(0,0,0,.5))}
+.hv-1{width:58%;left:20%;top:22%;animation:flota 6s ease-in-out infinite}
+.hv-2{width:34%;left:-2%;top:6%;animation:flota 7s ease-in-out infinite reverse}
+.hv-3{width:30%;right:-2%;top:2%;animation:flota 8s ease-in-out infinite}
+.hv-4{width:36%;right:0;bottom:4%;animation:flota 6.5s ease-in-out infinite reverse}
+.hv-5{width:30%;left:2%;bottom:6%;animation:flota 7.5s ease-in-out infinite}
+@keyframes flota{50%{transform:translateY(-12px)}}
+.sello{position:absolute;left:50%;bottom:-2%;transform:translateX(-50%) rotate(-4deg);background:var(--amarillo);color:var(--negro);font-weight:900;padding:.5rem 1rem;border:3px solid var(--negro);border-radius:8px;text-transform:uppercase;font-size:.85rem;white-space:nowrap;box-shadow:6px 6px 0 var(--negro)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:420px;order:-1}.hero-datos{padding-bottom:2.5rem}}
+
+/* ---------- ASISTENTE ---------- */
+.asistente{display:grid;grid-template-columns:1fr 1.05fr;gap:2rem;align-items:start}
+.tareas{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.tarea{display:flex;align-items:center;gap:.8rem;text-align:left;font-family:inherit;font-weight:700;font-size:.95rem;padding:1rem;border-radius:var(--radio-s);border:2px solid var(--concreto-2);background:#fff;cursor:pointer;transition:.15s;color:var(--negro)}
+.tarea:hover{border-color:var(--negro);transform:translateY(-2px)}
+.tarea[aria-pressed=true]{border-color:var(--rojo);background:var(--rojo-claro);box-shadow:0 8px 20px -10px rgba(230,15,22,.6)}
+.tarea .emo{font-size:1.6rem;width:44px;height:44px;flex:none;display:grid;place-items:center;background:var(--concreto);border-radius:10px}
+.respuesta{position:sticky;top:96px;background:var(--negro);color:#fff;border-radius:var(--radio);padding:clamp(1.4rem,3vw,2rem);overflow:hidden;min-height:100%}
+.respuesta::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 14px,var(--negro) 14px 28px)}
+.resp-vacia{display:grid;place-items:center;text-align:center;gap:1rem;padding:2rem 0;color:#bdbdbd}
+.resp-vacia img{width:150px;opacity:.9;filter:invert(1)}
+.resp-titulo{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo);font-weight:800;margin:.6rem 0 .3rem}
+.resp-maquinas{display:grid;gap:1rem;margin:1rem 0 1.4rem}
+.resp-maq{display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:center;background:rgba(255,255,255,.06);border-radius:14px;padding:.8rem}
+.resp-maq .foto{background:#fff;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:.5rem}
+.resp-maq .foto img{max-height:90px;object-fit:contain}
+.resp-maq h4{font-size:1.1rem;font-weight:800;letter-spacing:0}
+.resp-maq p{font-size:.9rem;color:#cfcfcf;line-height:1.45}
+.consejo{display:flex;gap:.7rem;background:rgba(255,210,0,.12);border-left:4px solid var(--amarillo);padding:.8rem 1rem;border-radius:8px;font-size:.9rem;color:#f1f1f1;margin-bottom:1.3rem}
+@media (max-width:900px){.asistente{grid-template-columns:1fr}.respuesta{position:static}}
+@media (max-width:480px){.tareas{grid-template-columns:1fr}.resp-maq{grid-template-columns:84px 1fr}}
+
+/* ---------- CATÁLOGO ---------- */
+.filtros{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.6rem;margin-bottom:1.8rem;scrollbar-width:none}
+.filtros::-webkit-scrollbar{display:none}
+.chip{flex:none;font-family:inherit;font-weight:700;font-size:.9rem;padding:.6rem 1.1rem;border-radius:999px;border:2px solid var(--concreto-2);background:#fff;cursor:pointer;color:var(--negro)}
+.chip.activo{background:var(--negro);border-color:var(--negro);color:#fff}
+.grid-maq{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.3rem}
+.maq{display:flex;flex-direction:column;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.maq:hover{transform:translateY(-6px);box-shadow:var(--sombra-l)}
+.maq .foto{position:relative;height:210px;background:linear-gradient(160deg,#fff 0%,var(--concreto) 100%);display:grid;place-items:center;padding:1.2rem}
+.maq .foto img{max-height:100%;max-width:100%;min-height:0;object-fit:contain;transition:transform .3s}
+.maq:hover .foto img{transform:scale(1.06) rotate(-1deg)}
+.maq .cat{position:absolute;top:12px;left:12px;background:var(--negro);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .65rem;border-radius:6px}
+.maq .cuerpo{padding:1.2rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.maq h3{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.maq .sirve{font-size:.92rem;color:#454545;line-height:1.5}
+.maq .sirve b{color:var(--negro)}
+.etiquetas{display:flex;flex-wrap:wrap;gap:.4rem}
+.etq{font-size:.75rem;font-weight:700;padding:.28rem .6rem;border-radius:6px;background:var(--concreto);color:#333}
+.etq.facil{background:#E7F8EE;color:#11733A}
+.maq .btn{margin-top:auto;padding:.8rem 1rem;font-size:.92rem}
+
+/* ---------- PASOS ---------- */
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:paso}
+.paso{position:relative;background:var(--carbon);border:1px solid #2a2a2a;border-radius:var(--radio);padding:1.8rem 1.4rem 1.5rem}
+.paso::before{counter-increment:paso;content:"0" counter(paso);position:absolute;top:-18px;left:1.4rem;background:var(--rojo);color:#fff;font-weight:900;font-size:1.1rem;padding:.35rem .75rem;border-radius:8px;transform:skewX(-8deg)}
+.paso .ico{font-size:2.2rem;margin:.6rem 0 .8rem}
+.paso h3{font-size:1.15rem;margin-bottom:.5rem;letter-spacing:0;font-weight:800}
+.paso p{color:#bdbdbd;font-size:.93rem}
+@media (max-width:900px){.pasos{grid-template-columns:1fr 1fr;row-gap:2.2rem}}
+@media (max-width:520px){.pasos{grid-template-columns:1fr}}
+
+/* ---------- SERVICIOS ---------- */
+.servicios{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
+.serv{padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;position:relative;overflow:hidden}
+.serv::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;background:var(--rojo);opacity:.07;transform:rotate(45deg)}
+.serv .ico{width:56px;height:56px;border-radius:14px;background:var(--rojo);color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 10px 20px -10px rgba(230,15,22,.8)}
+.serv h3{font-size:1.25rem;font-weight:800;letter-spacing:-.01em}
+.serv p{color:#4a4a4a;font-size:.95rem}
+.serv ul{list-style:none;display:grid;gap:.35rem;font-size:.9rem}
+.serv li{display:flex;gap:.5rem}
+.serv li::before{content:"✔";color:var(--rojo);font-weight:900}
+.serv-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:2rem;padding:1.5rem 1.8rem;border-radius:var(--radio);background:var(--amarillo);border:3px solid var(--negro);box-shadow:8px 8px 0 var(--negro)}
+.serv-cta h3{font-size:clamp(1.2rem,2.5vw,1.6rem);text-transform:uppercase}
+
+/* ---------- PESADA ---------- */
+.pesada{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pes{background:var(--carbon);border-radius:var(--radio);overflow:hidden;border:1px solid #2a2a2a;display:flex;flex-direction:column}
+.pes .foto{height:220px;display:grid;place-items:center;padding:1.2rem;background:radial-gradient(circle at 50% 70%,#3a3a3a 0,#161616 70%)}
+.pes .foto img{max-height:100%;max-width:100%;min-height:0;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(0,0,0,.6))}
+.pes .cuerpo{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.pes h3{font-size:1.2rem;font-weight:800;letter-spacing:0}
+.pes p{color:#bdbdbd;font-size:.93rem}
+.pes .etq{background:#2d2d2d;color:#e5e5e5}
+.pes .btn{margin-top:auto;padding:.75rem 1rem;font-size:.9rem;color:#fff}
+@media (max-width:900px){.pesada{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.pesada{grid-template-columns:1fr}}
+
+/* ---------- GLOSARIO + FAQ ---------- */
+.glosario{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.glos{padding:1.2rem 1.3rem;border-radius:var(--radio-s);background:#fff;border:2px dashed var(--concreto-2)}
+.glos b{display:block;font-size:1.05rem;font-weight:800;margin-bottom:.25rem}
+.glos span{font-size:.9rem;color:#4a4a4a}
+.faq{display:grid;gap:.8rem;max-width:860px}
+.faq details{background:#fff;border-radius:var(--radio-s);border:1px solid var(--concreto-2);padding:0 1.3rem}
+.faq summary{cursor:pointer;list-style:none;font-weight:800;padding:1.15rem 0;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--rojo);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:1.2rem;color:#444}
+.dos-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+@media (max-width:900px){.dos-col{grid-template-columns:1fr}}
+
+/* ---------- CTA FINAL ---------- */
+.cta-final{position:relative;background:var(--rojo);color:#fff;overflow:hidden;padding:clamp(3.5rem,8vw,5.5rem) 0}
+.cta-final::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.07) 0 22px,transparent 22px 44px)}
+.cta-final .contenedor{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.cta-final img{width:min(320px,80%);justify-self:center;filter:brightness(0) invert(1);opacity:.95}
+.telefonos{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.tel{background:#fff;color:var(--negro);text-decoration:none;font-weight:900;font-size:clamp(1.3rem,3vw,1.9rem);padding:.55rem 1.2rem;border-radius:12px;box-shadow:6px 6px 0 var(--negro);letter-spacing:.02em}
+.tel:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--negro)}
+@media (max-width:800px){.cta-final .contenedor{grid-template-columns:1fr}.cta-final img{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="header">
+  <div class="contenedor">
+    <a class="marca" href="#inicio" aria-label="Kastor, ir al inicio">
+      <img src="img/isotipo-kastor.png" alt="">
+      <span><b>KASTOR</b><small>CONSTRUYE Y AVANZA</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false" id="menuBtn"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#que-necesito">¿Qué necesito?</a>
+      <a href="#equipos">Equipos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#pesada">Maquinaria pesada</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-rojo" href="#contacto">Cotiza gratis</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="contenedor hero-grid">
+    <div class="aparece">
+      <span class="kicker">Alquiler de maquinaria en Perú</span>
+      <h1 class="h-display" style="margin-top:1rem">
+        <span class="linea">La máquina</span>
+        <span class="linea">que tu obra</span>
+        <span class="linea rojo">necesita, hoy.</span>
+      </h1>
+      <p class="lead">Compresoras, generadores, martillos, mezcladoras y más, para tu <b style="color:#fff">casa</b> o tu <b style="color:#fff">obra</b>. Te la llevamos, te enseñamos a usarla y la recogemos cuando terminas.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" data-wa="Hola Kastor 👋 Quiero alquilar una máquina." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16A11.87 11.87 0 0112.04 0C18.6 0 24 5.33 24 11.9a11.94 11.94 0 01-17.6 10.46L.06 24zm6.6-3.8a9.86 9.86 0 0015.33-8.3A9.9 9.9 0 002 11.93a9.8 9.8 0 001.66 5.47l-.99 3.62 3.98-1.04zM17.4 14.9c-.08-.13-.29-.21-.6-.36s-1.78-.88-2.05-.98-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.66.07a8.1 8.1 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.61l.45-.53a2 2 0 00.3-.5.55.55 0 000-.52c-.08-.15-.68-1.63-.93-2.24s-.5-.5-.68-.5h-.58a1.1 1.1 0 00-.8.37 3.35 3.35 0 00-1.04 2.49 5.8 5.8 0 001.22 3.08 13.3 13.3 0 005.1 4.5c.71.3 1.27.49 1.7.63a4.1 4.1 0 001.88.12 3.07 3.07 0 002.02-1.42 2.5 2.5 0 00.17-1.42z"/></svg>
+          Pide por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="#que-necesito">¿Qué máquina necesito?</a>
+      </div>
+      <div class="hero-datos">
+        <div><i>🚚</i>Te la llevamos</div>
+        <div><i>🧑‍🏫</i>Te enseñamos a usarla</div>
+        <div><i>📅</i>Por día o por semana</div>
+      </div>
+    </div>
+    <div class="hero-visual aparece" aria-hidden="true">
+      <div class="disco"></div>
+      <img class="hv-2" src="img/maq/compresora.webp" alt="">
+      <img class="hv-3" src="img/maq/martillo-demoledor.webp" alt="">
+      <img class="hv-1" src="img/maq/generador-5500.webp" alt="">
+      <img class="hv-5" src="img/maq/plancha-compactadora.webp" alt="">
+      <img class="hv-4" src="img/maq/mezcladora.webp" alt="">
+      <div class="sello">¡Déjanoslo a nosotros!</div>
+    </div>
+  </div>
+  <div class="cinta-texto" aria-hidden="true">
+    <div class="pista">
+      <span>Alquiler</span><span>Maquinaria liviana</span><span>Servicios generales</span><span>Demolición</span><span>Maquinaria pesada</span><span>Construye y avanza</span>
+      <span>Alquiler</span><span>Maquinaria liviana</span><span>Servicios generales</span><span>Demolición</span><span>Maquinaria pesada</span><span>Construye y avanza</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASISTENTE ============ -->
+<section id="que-necesito" class="gris">
+  <div class="contenedor">
+    <div class="cabecera-seccion aparece">
+      <span class="kicker">Paso 1 · Te ayudamos a elegir</span>
+      <h2 class="h-seccion">¿Qué quieres hacer?</h2>
+      <p class="lead">No necesitas saber el nombre de la máquina. Elige tu trabajo y te decimos cuál te sirve.</p>
+    </div>
+    <div class="asistente">
+      <div class="tareas aparece" id="tareas" role="group" aria-label="Elige lo que quieres hacer"></div>
+      <div class="respuesta aparece" id="respuesta" aria-live="polite">
+        <div class="resp-vacia">
+          <img src="img/castor-silueta.png" alt="">
+          <p><b style="color:#fff;font-size:1.1rem">Elige un trabajo de la lista</b><br>y aquí verás la máquina ideal, para qué sirve y un consejo de nuestro equipo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATÁLOGO LIVIANO ============ -->
+<section id="equipos">
+  <div class="contenedor">
+    <div class="cabecera-seccion aparece">
+      <span class="kicker">Maquinaria liviana</span>
+      <h2 class="h-seccion">Equipos para tu casa y tu obra</h2>
+      <p class="lead">Máquinas fáciles de mover y de usar. Cada una tiene una explicación sencilla para que sepas exactamente para qué sirve.</p>
+    </div>
+    <div class="filtros" id="filtros" role="tablist" aria-label="Filtrar equipos"></div>
+    <div class="grid-maq" id="gridMaq"></div>
+  </div>
+</section>
+
+<!-- ============ CÓMO ALQUILAR ============ -->
+<section class="oscuro" id="como">
+  <div class="contenedor">
+    <div class="cabecera-seccion aparece">
+      <span class="kicker">Así de fácil</span>
+      <h2 class="h-seccion">Alquilar en 4 pasos</h2>
+      <p class="lead">Sin papeleo complicado. Todo por WhatsApp o una llamada.</p>
+    </div>
+    <div class="pasos">
+      <div class="paso aparece"><div class="ico">💬</div><h3>Escríbenos</h3><p>Cuéntanos qué trabajo vas a hacer, dónde y por cuántos días. Si no sabes qué máquina pedir, te asesoramos.</p></div>
+      <div class="paso aparece"><div class="ico">🧾</div><h3>Recibe tu cotización</h3><p>Te enviamos el precio claro, sin sorpresas: alquiler, traslado y garantía.</p></div>
+      <div class="paso aparece"><div class="ico">🚚</div><h3>Te la llevamos</h3><p>Entregamos la máquina revisada y lista. Te explicamos cómo usarla de forma segura.</p></div>
+      <div class="paso aparece"><div class="ico">✅</div><h3>Trabaja y avanza</h3><p>Cuando termines, nos avisas y la recogemos. ¿Necesitas más días? Lo extendemos con un mensaje.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios" class="gris">
+  <div class="contenedor">
+    <div class="cabecera-seccion aparece">
+      <span class="kicker">Servicios generales</span>
+      <h2 class="h-seccion">¿No quieres hacerlo tú? Lo hacemos por ti</h2>
+      <p class="lead">Ponemos la máquina <b>y el personal</b>. Tú solo nos dices qué necesitas y nosotros nos encargamos.</p>
+    </div>
+    <div class="servicios" id="gridServ"></div>
+    <div class="serv-cta aparece">
+      <h3>¿Tienes un trabajo en mente?<br><span style="font-size:.75em">Visitamos tu terreno y te cotizamos.</span></h3>
+      <a class="btn btn-negro" data-wa="Hola Kastor 👋 Quiero cotizar un servicio (demolición / nivelación / excavación)." href="#">Pedir visita técnica</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PESADA ============ -->
+<section id="pesada" class="oscuro">
+  <div class="contenedor">
+    <div class="cabecera-seccion aparece">
+      <span class="kicker">Maquinaria pesada</span>
+      <h2 class="h-seccion">Para los trabajos grandes</h2>
+      <p class="lead">Cuando el trabajo crece, también tenemos maquinaria pesada. Se alquila <b style="color:#fff">con operador experimentado</b>, para que no te preocupes por nada.</p>
+    </div>
+    <div class="pesada" id="gridPes"></div>
+  </div>
+</section>
+
+<!-- ============ GLOSARIO + FAQ ============ -->
+<section id="preguntas">
+  <div class="contenedor dos-col">
+    <div>
+      <div class="cabecera-seccion aparece">
+        <span class="kicker">Mini diccionario de obra</span>
+        <h2 class="h-seccion" style="font-size:clamp(1.6rem,3vw,2.3rem)">Palabras que escucharás</h2>
+        <p class="lead">Para que entiendas al maestro de obra sin complicarte.</p>
+      </div>
+      <div class="glosario aparece">
+        <div class="glos"><b>Desmonte</b><span>Los escombros, tierra y restos que quedan después de demoler o excavar.</span></div>
+        <div class="glos"><b>Compactar</b><span>Apretar la tierra para que quede firme y no se hunda después.</span></div>
+        <div class="glos"><b>Afirmado</b><span>Capa de piedra y tierra compactada que va debajo de pisos y pistas.</span></div>
+        <div class="glos"><b>Vaciado</b><span>El momento en que se echa el concreto en el techo, losa o columna.</span></div>
+        <div class="glos"><b>Picar</b><span>Romper parte de una pared o piso para pasar tubos o cables.</span></div>
+        <div class="glos"><b>m³ (metro cúbico)</b><span>Medida de volumen: una caja de 1 m de largo, 1 m de ancho y 1 m de alto.</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="cabecera-seccion aparece">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2 class="h-seccion" style="font-size:clamp(1.6rem,3vw,2.3rem)">Resolvemos tus dudas</h2>
+      </div>
+      <div class="faq aparece">
+        <details open><summary>¿Necesito saber usar la máquina?</summary><p>No. Al entregarla te explicamos paso a paso cómo usarla de forma segura. Las máquinas livianas están pensadas para que cualquier persona pueda manejarlas.</p></details>
+        <details><summary>¿Por cuánto tiempo puedo alquilar?</summary><p>Por día, por semana o por mes. Si necesitas más tiempo, solo avísanos por WhatsApp y lo extendemos.</p></details>
+        <details><summary>¿Llevan la máquina hasta mi casa u obra?</summary><p>Sí, te la llevamos y la recogemos. El costo del traslado depende de la distancia y te lo indicamos en la cotización.</p></details>
+        <details><summary>¿Qué necesito para alquilar?</summary><p>Tu DNI o RUC y la dirección donde se usará la máquina. Según el equipo, puede pedirse una garantía que se devuelve al terminar.</p></details>
+        <details><summary>¿El combustible está incluido?</summary><p>La máquina se entrega con su tanque lleno y se devuelve igual. Te decimos cuánto consume para que calcules sin sorpresas.</p></details>
+        <details><summary>¿Emiten factura?</summary><p>Sí, emitimos boleta o factura electrónica.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="contacto">
+  <div class="contenedor">
+    <div class="aparece">
+      <h2 class="h-display" style="font-size:clamp(2.2rem,5.5vw,4rem)">¡Solo llámanos!</h2>
+      <p class="lead" style="color:#ffe1e1;margin-top:.8rem">Déjanoslo a nosotros. Te respondemos rápido por llamada o WhatsApp y te ayudamos a elegir lo que necesitas.</p>
+      <div class="telefonos">
+        <a class="tel" href="tel:+51913170982">913 170 982</a>
+        <a class="tel" href="tel:+51946252355">946 252 355</a>
+      </div>
+      <div style="margin-top:1.4rem"><a class="btn btn-negro" data-wa="Hola Kastor 👋 Quiero una cotización." href="#">Escribir por WhatsApp</a></div>
+    </div>
+    <img src="img/castor-silueta.png" alt="">
+  </div>
+</section>
+<div class="cinta"></div>
+
+<!-- ============ PIE ============ -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <img src="img/logo-kastor-negro.png" alt="Kastor · Construye y avanza">
+        <p style="margin-top:1rem;font-size:.92rem;max-width:30ch">Alquiler de maquinaria liviana y pesada, construcción y servicios generales.</p>
+      </div>
+      <div><h4>Equipos</h4><ul><li><a href="#equipos">Maquinaria liviana</a></li><li><a href="#pesada">Maquinaria pesada</a></li><li><a href="#que-necesito">¿Qué necesito?</a></li></ul></div>
+      <div><h4>Servicios</h4><ul><li><a href="#servicios">Demolición</a></li><li><a href="#servicios">Nivelación de terreno</a></li><li><a href="#servicios">Eliminación de desmonte</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+51913170982">📞 913 170 982</a></li><li><a href="tel:+51946252355">📞 946 252 355</a></li><li><a data-wa="Hola Kastor 👋" href="#">💬 WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-legal"><span>© <span id="anio"></span> Kastor · Construye y avanza</span><a href="branding.html">Manual de marca</a></div>
+  </div>
+</footer>
+
+<a class="wa-flotante" data-wa="Hola Kastor 👋 Quiero información." href="#" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M.06 24l1.69-6.16A11.87 11.87 0 0112.04 0C18.6 0 24 5.33 24 11.9a11.94 11.94 0 01-17.6 10.46L.06 24zm6.6-3.8a9.86 9.86 0 0015.33-8.3A9.9 9.9 0 002 11.93a9.8 9.8 0 001.66 5.47l-.99 3.62 3.98-1.04zM17.4 14.9c-.08-.13-.29-.21-.6-.36s-1.78-.88-2.05-.98-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.66.07a8.1 8.1 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.61l.45-.53a2 2 0 00.3-.5.55.55 0 000-.52c-.08-.15-.68-1.63-.93-2.24s-.5-.5-.68-.5h-.58a1.1 1.1 0 00-.8.37 3.35 3.35 0 00-1.04 2.49 5.8 5.8 0 001.22 3.08 13.3 13.3 0 005.1 4.5c.71.3 1.27.49 1.7.63a4.1 4.1 0 001.88.12 3.07 3.07 0 002.02-1.42 2.5 2.5 0 00.17-1.42z"/></svg></a>
+
+<script>
+const WA = "51913170982";
+const wa = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+
+/* ---------- Datos: maquinaria liviana ---------- */
+const CATS = {energia:"Energía", demolicion:"Demolición y perforación", concreto:"Concreto", compactacion:"Compactación", corte:"Corte", aire:"Aire comprimido"};
+const MAQ = [
+  {id:"compresora", n:"Compresora de aire", c:"aire", img:"compresora", s:"Genera <b>aire a presión</b> para pintar con pistola, inflar llantas, limpiar polvo o usar clavadoras neumáticas.", donde:["casa","obra"], facil:true},
+  {id:"gen-inv", n:"Generador silencioso (inverter)", c:"energia", img:"generador-inverter", s:"Te da <b>electricidad donde no hay luz</b>. Es silencioso y cuida equipos delicados: laptop, TV, refrigeradora o un evento.", donde:["casa"], facil:true},
+  {id:"gen-5500", n:"Generador 5500 W", c:"energia", img:"generador-5500", s:"<b>Luz para la obra</b>: conecta taladros, amoladoras, focos o una bomba de agua al mismo tiempo.", donde:["casa","obra"], facil:true},
+  {id:"gen-alto", n:"Generador de alta potencia", c:"energia", img:"generador-7500", s:"Para cuando necesitas <b>más fuerza eléctrica</b>: varias herramientas grandes o una soldadora.", donde:["obra"], facil:true},
+  {id:"martillo-30", n:"Martillo rompepavimento", c:"demolicion", img:"martillo-30kg", s:"Rompe <b>pisos, veredas, losas y concreto grueso</b>. Se usa de pie y pega con mucha fuerza.", donde:["obra"]},
+  {id:"martillo-dem", n:"Martillo demoledor", c:"demolicion", img:"martillo-demoledor", s:"Para <b>picar paredes, sacar mayólicas</b> y romper concreto de forma controlada.", donde:["casa","obra"], facil:true},
+  {id:"rotomartillo", n:"Rotomartillo", c:"demolicion", img:"rotomartillo", s:"<b>Perfora concreto y ladrillo</b> para poner anclajes, tubos o pernos. También sirve para picar.", donde:["casa","obra"], facil:true},
+  {id:"mezcladora", n:"Mezcladora de concreto (trompo)", c:"concreto", img:"mezcladora", s:"<b>Mezcla cemento, arena, piedra y agua</b> de forma pareja y rápida. Ideal para techos, losas y columnas.", donde:["casa","obra"], facil:true},
+  {id:"vibrador", n:"Vibrador de concreto", c:"concreto", img:"vibrador-concreto", s:"Saca las <b>burbujas de aire del concreto</b> recién vaciado para que quede firme y sin huecos.", donde:["obra"], facil:true},
+  {id:"plancha", n:"Plancha compactadora", c:"compactacion", img:"plancha-compactadora", s:"<b>Aplana y endurece</b> tierra, arena o afirmado antes de poner piso, adoquines o veredas.", donde:["casa","obra"], facil:true},
+  {id:"apisonador", n:"Apisonador (canguro)", c:"compactacion", img:"apisonador", s:"Compacta tierra en <b>espacios angostos</b>: zanjas, bordes y alrededor de tuberías.", donde:["obra"]},
+  {id:"rodillo-m", n:"Rodillo compactador manual", c:"compactacion", img:"rodillo-zanjero", s:"Compacta <b>áreas medianas</b>: patios, estacionamientos, pistas internas y bases.", donde:["obra"]},
+  {id:"cortadora", n:"Cortadora de concreto y asfalto", c:"corte", img:"cortadora-concreto", s:"Hace <b>cortes rectos y limpios</b> en pisos de concreto o pistas antes de romperlos.", donde:["obra"]},
+  {id:"motosierra", n:"Motosierra", c:"corte", img:"motosierra", s:"Corta <b>troncos, ramas y madera</b>. Muy útil para limpiar terrenos y jardines grandes.", donde:["casa","obra"]},
+];
+const PESADA = [
+  {n:"Retroexcavadora", img:"retroexcavadora", s:"Excava zanjas, carga tierra, demuele y nivela. Es la <b>todo terreno</b> de la obra.", t:["Excavación","Carguío","Demolición"]},
+  {n:"Volquete", img:"volquete", s:"Transporta y <b>elimina desmonte</b>, tierra, arena o piedra fuera de tu obra.", t:["Eliminación","Transporte"]},
+  {n:"Rodillo compactador", img:"rodillo-cat", s:"Compacta <b>pistas, caminos y grandes áreas</b> para que el suelo quede firme y parejo.", t:["Pistas","Caminos","Afirmado"]},
+];
+const SERV = [
+  {i:"🔨", n:"Demolición", s:"Derribamos paredes, techos, pisos o construcciones completas de forma segura.", l:["Demolición parcial o total","Picado de pisos y muros","Retiro de escombros"]},
+  {i:"🚜", n:"Nivelación y aplanamiento", s:"Dejamos tu terreno parejo y listo para construir encima.", l:["Nivelación de terrenos","Relleno y compactado","Preparación de afirmado"]},
+  {i:"⛏️", n:"Excavación y zanjas", s:"Abrimos espacio para cimientos, cisternas, desagües o tuberías.", l:["Cimientos y zapatas","Zanjas para tuberías","Cisternas y pozos"]},
+  {i:"🚛", n:"Eliminación de desmonte", s:"Nos llevamos los escombros y la tierra que sobra en tu obra.", l:["Carguío con máquina","Transporte en volquete","Obra limpia al terminar"]},
+  {i:"🪚", n:"Corte de concreto y asfalto", s:"Cortes precisos en pisos y pistas para instalaciones o reparaciones.", l:["Corte de losas y veredas","Corte de pistas","Aperturas para tuberías"]},
+  {i:"🌿", n:"Limpieza de terrenos", s:"Retiramos maleza, árboles, basura y piedras para que puedas empezar.", l:["Desbroce y desmalezado","Tala de árboles","Retiro de basura"]},
+];
+const TAREAS = [
+  {e:"🧱", t:"Romper un piso o una pared", m:["martillo-dem","martillo-30"], tip:"Para pisos gruesos o veredas usa el rompepavimento. Para paredes y mayólicas, el demoledor es más cómodo. Usa lentes y guantes."},
+  {e:"💡", t:"No hay luz en mi casa u obra", m:["gen-inv","gen-5500"], tip:"Para casa o equipos delicados elige el inverter (es silencioso). Para herramientas de obra, el de 5500 W. Nunca lo prendas dentro de un cuarto cerrado."},
+  {e:"🎨", t:"Pintar, inflar o usar aire a presión", m:["compresora"], tip:"Dinos qué herramienta vas a conectar (pistola de pintura, clavadora, etc.) y te confirmamos si la compresora alcanza."},
+  {e:"🪣", t:"Preparar concreto para techo o losa", m:["mezcladora","vibrador"], tip:"El día del vaciado, la mezcladora y el vibrador trabajan juntos: uno mezcla y el otro deja el concreto firme."},
+  {e:"🏗️", t:"Compactar tierra o afirmado", m:["plancha","apisonador"], tip:"Para áreas abiertas (patio, vereda) usa la plancha. Para zanjas o bordes angostos, el canguro."},
+  {e:"🔩", t:"Hacer huecos en concreto", m:["rotomartillo"], tip:"Dinos el diámetro del hueco y te enviamos las brocas adecuadas."},
+  {e:"✂️", t:"Cortar concreto o asfalto", m:["cortadora"], tip:"Cortar antes de romper deja bordes limpios y evita dañar lo que no quieres romper."},
+  {e:"🌳", t:"Cortar árboles o limpiar terreno", m:["motosierra"], tip:"Si el terreno es grande, también podemos hacer la limpieza por ti con nuestro servicio de limpieza de terrenos."},
+];
+
+const byId = Object.fromEntries(MAQ.map(m => [m.id, m]));
+const lugar = d => d.map(x => x === "casa" ? '<span class="etq">🏠 Casa</span>' : '<span class="etq">🏗️ Obra</span>').join("");
+
+/* Catálogo */
+const grid = document.getElementById("gridMaq");
+function pintaMaq(cat){
+  grid.innerHTML = MAQ.filter(m => cat === "todo" || m.c === cat).map(m => `
+    <article class="maq tarjeta">
+      <div class="foto"><span class="cat">${CATS[m.c]}</span><img src="img/maq/${m.img}.webp" alt="${m.n}"></div>
+      <div class="cuerpo">
+        <h3>${m.n}</h3>
+        <p class="sirve">${m.s}</p>
+        <div class="etiquetas">${lugar(m.donde)}${m.facil ? '<span class="etq facil">👍 Fácil de usar</span>' : ""}</div>
+        <a class="btn btn-rojo" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero alquilar: ${m.n}. ¿Me pasan precio y disponibilidad?`)}">Cotizar este equipo</a>
+      </div>
+    </article>`).join("");
+}
+const filtros = document.getElementById("filtros");
+filtros.innerHTML = [["todo","Todos"], ...Object.entries(CATS)].map(([k,v],i) => `<button class="chip${i?"":" activo"}" data-cat="${k}" role="tab">${v}</button>`).join("");
+filtros.addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if(!b) return;
+  filtros.querySelectorAll(".chip").forEach(c => c.classList.toggle("activo", c === b));
+  pintaMaq(b.dataset.cat);
+});
+pintaMaq("todo");
+
+/* Asistente */
+const tareas = document.getElementById("tareas"), resp = document.getElementById("respuesta");
+tareas.innerHTML = TAREAS.map((t,i) => `<button class="tarea" aria-pressed="false" data-i="${i}"><span class="emo">${t.e}</span>${t.t}</button>`).join("");
+tareas.addEventListener("click", e => {
+  const b = e.target.closest(".tarea"); if(!b) return;
+  tareas.querySelectorAll(".tarea").forEach(x => x.setAttribute("aria-pressed", x === b));
+  const t = TAREAS[b.dataset.i], ms = t.m.map(id => byId[id]);
+  resp.innerHTML = `
+    <p class="resp-titulo">Para “${t.t.toLowerCase()}” te recomendamos</p>
+    <div class="resp-maquinas">${ms.map(m => `
+      <div class="resp-maq"><div class="foto"><img src="img/maq/${m.img}.webp" alt="${m.n}"></div>
+      <div><h4>${m.n}</h4><p>${m.s.replace(/<\/?b>/g,"")}</p></div></div>`).join("")}</div>
+    <div class="consejo"><span>💡</span><span><b>Consejo Kastor:</b> ${t.tip}</span></div>
+    <a class="btn btn-wa" style="width:100%" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero ${t.t.toLowerCase()}. Me recomendaron: ${ms.map(m=>m.n).join(" y ")}. ¿Me cotizan?`)}">Cotizar por WhatsApp</a>`;
+  if (innerWidth < 900) resp.scrollIntoView({behavior:"smooth", block:"start"});
+});
+
+/* Servicios y pesada */
+document.getElementById("gridServ").innerHTML = SERV.map(s => `
+  <article class="serv tarjeta aparece"><div class="ico">${s.i}</div><h3>${s.n}</h3><p>${s.s}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
+document.getElementById("gridPes").innerHTML = PESADA.map(p => `
+  <article class="pes aparece"><div class="foto"><img src="img/maq/${p.img}.webp" alt="${p.n}"></div>
+  <div class="cuerpo"><h3>${p.n}</h3><p>${p.s}</p><div class="etiquetas">${p.t.map(x=>`<span class="etq">${x}</span>`).join("")}<span class="etq">👷 Con operador</span></div>
+  <a class="btn btn-borde" target="_blank" rel="noopener" href="${wa(`Hola Kastor 👋 Quiero cotizar ${p.n} con operador.`)}">Cotizar con operador</a></div></article>`).join("");
+
+/* WhatsApp genérico */
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = wa(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
+
+/* Menú móvil */
+const nav = document.getElementById("nav"), mb = document.getElementById("menuBtn");
+mb.addEventListener("click", () => { const o = nav.classList.toggle("abierto"); mb.setAttribute("aria-expanded", o); });
+nav.addEventListener("click", e => { if (e.target.closest("a")) { nav.classList.remove("abierto"); mb.setAttribute("aria-expanded", false); } });
+
+/* Aparición al hacer scroll */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll(".aparece").forEach(el => io.observe(el));
+document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

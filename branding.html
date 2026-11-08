@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de marca · Kastor</title>
+<meta name="description" content="Manual de identidad visual de Kastor: logo, colores, tipografía, elementos gráficos, tono de voz y aplicaciones.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/kastor.css">
+<style>
+section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--concreto-2)}
+.num{font-weight:900;font-size:.85rem;color:var(--rojo);letter-spacing:.14em}
+.titulo-sec{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,1fr);gap:1.2rem 2rem;align-items:end;margin-bottom:2.5rem}
+.titulo-sec .num{grid-column:1/-1}
+.titulo-sec h2{font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase}
+.titulo-sec p{color:#444;max-width:56ch}
+@media (max-width:800px){.titulo-sec{grid-template-columns:1fr}}
+
+/* Portada */
+.portada{background:var(--negro);color:#fff;padding:0;border:0;position:relative;overflow:hidden}
+.portada .contenedor{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;min-height:min(88vh,760px);padding:4rem 0}
+.portada h1{font-size:clamp(2.6rem,7vw,5.6rem);text-transform:uppercase}
+.portada h1 span{color:var(--rojo)}
+.portada p{color:#cfcfcf;font-size:1.1rem;max-width:46ch;margin-top:1.2rem}
+.portada .logo-p{background:#000;border-radius:28px;padding:2rem;box-shadow:0 0 0 1px #222,var(--sombra-l)}
+.indice{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.indice a{font-size:.82rem;font-weight:700;text-decoration:none;border:1px solid #333;padding:.45rem .8rem;border-radius:999px;color:#ddd}
+.indice a:hover{border-color:var(--rojo);color:#fff}
+@media (max-width:860px){.portada .contenedor{grid-template-columns:1fr}.portada .logo-p{max-width:420px}}
+
+/* Esencia */
+.esencia{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.esencia .tarjeta{padding:1.6rem}
+.esencia h3{font-size:1.2rem;margin:.6rem 0 .5rem;letter-spacing:0;font-weight:800}
+.esencia .grande{font-size:2.2rem}
+.personalidad{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+.rasgo{background:var(--negro);color:#fff;border-radius:var(--radio);padding:1.4rem}
+.rasgo b{display:block;font-size:1.3rem;font-weight:900;text-transform:uppercase;color:var(--amarillo)}
+.rasgo span{font-size:.9rem;color:#cfcfcf}
+.historia{margin-top:1.5rem;display:grid;grid-template-columns:200px 1fr;gap:2rem;align-items:center;background:var(--concreto);border-radius:var(--radio);padding:1.8rem}
+@media (max-width:860px){.esencia,.personalidad{grid-template-columns:1fr 1fr}.historia{grid-template-columns:1fr}.historia img{width:150px}}
+@media (max-width:520px){.esencia,.personalidad{grid-template-columns:1fr}}
+
+/* Logo */
+.logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.lienzo{border-radius:var(--radio);display:grid;place-items:center;padding:clamp(1.5rem,4vw,3rem);position:relative;min-height:280px}
+.lienzo img{max-height:260px;width:auto}
+.lienzo .rot{position:absolute;left:1rem;bottom:.8rem;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.b-blanco{background:#fff;border:1px solid var(--concreto-2)}
+.b-negro{background:#000;color:#fff}
+.b-rojo{background:var(--rojo);color:#fff}
+.b-amarillo{background:var(--amarillo)}
+.anatomia{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;margin-top:2rem}
+.anatomia ol{display:grid;gap:.9rem;list-style:none;counter-reset:a}
+.anatomia li{display:grid;grid-template-columns:36px 1fr;gap:.8rem;align-items:start}
+.anatomia li::before{counter-increment:a;content:counter(a);width:36px;height:36px;border-radius:50%;background:var(--rojo);color:#fff;display:grid;place-items:center;font-weight:900}
+.zona{position:relative;padding:44px;border:2px dashed var(--rojo);border-radius:8px;background:repeating-linear-gradient(45deg,var(--rojo-claro) 0 8px,#fff 8px 16px)}
+.zona img{background:#fff;max-height:240px;margin:auto}
+.zona .x{position:absolute;font-weight:900;color:var(--rojo);font-size:.9rem}
+.reglas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.regla{padding:1.4rem}
+.regla h4{font-size:1rem;margin-bottom:.4rem;letter-spacing:0}
+.regla p{font-size:.9rem;color:#4a4a4a}
+.tamanos{display:flex;align-items:flex-end;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+.tamanos div{text-align:center;font-size:.75rem;font-weight:700;color:var(--acero)}
+@media (max-width:860px){.logos,.anatomia,.reglas{grid-template-columns:1fr}}
+
+/* Incorrectos */
+.malos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.malo{border-radius:var(--radio-s);overflow:hidden;border:1px solid var(--concreto-2)}
+.malo .l{height:170px;display:grid;place-items:center;padding:1rem;position:relative;background:#fff;overflow:hidden}
+.malo .l img{max-height:130px}
+.malo .l::after{content:"✕";position:absolute;top:8px;right:10px;width:28px;height:28px;border-radius:50%;background:var(--rojo);color:#fff;display:grid;place-items:center;font-weight:900;font-size:.9rem}
+.malo p{padding:.7rem .9rem;font-size:.85rem;font-weight:700;background:var(--concreto)}
+@media (max-width:860px){.malos{grid-template-columns:1fr 1fr}}
+
+/* Colores */
+.paleta{display:grid;grid-template-columns:2fr 2fr 1fr 1fr 1fr;gap:1rem}
+.color{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);background:#fff;cursor:pointer;border:1px solid var(--concreto-2);text-align:left;font-family:inherit;padding:0}
+.color .m{height:170px;display:flex;align-items:flex-end;padding:1rem;font-weight:900;font-size:1.1rem}
+.color .d{padding:1rem;font-size:.82rem;line-height:1.7;color:#333}
+.color .d b{display:block;font-size:.95rem;color:var(--negro)}
+.color .copiado{font-size:.72rem;color:var(--rojo);font-weight:800;min-height:1em}
+.proporcion{display:flex;height:56px;border-radius:12px;overflow:hidden;margin-top:1.5rem;font-weight:800;font-size:.8rem}
+.proporcion div{display:grid;place-items:center}
+.combos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+.combo{border-radius:var(--radio-s);padding:1.2rem;font-weight:900;font-size:1.3rem;text-transform:uppercase;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+.combo small{font-size:.72rem;font-weight:700;text-transform:none;letter-spacing:0;opacity:.85}
+@media (max-width:960px){.paleta{grid-template-columns:1fr 1fr}.combos{grid-template-columns:1fr 1fr}}
+
+/* Tipografía */
+.tipo{display:grid;grid-template-columns:1fr 1.3fr;gap:2rem;align-items:start}
+.especimen{background:var(--negro);color:#fff;border-radius:var(--radio);padding:2rem;overflow:hidden}
+.especimen .aa{font-size:clamp(6rem,14vw,10rem);font-weight:900;line-height:.9;letter-spacing:-.04em}
+.especimen .aa span{color:var(--rojo)}
+.especimen p{font-size:1.05rem;letter-spacing:.08em;margin-top:1rem;color:#d0d0d0;word-break:break-all}
+.pesos{display:grid;gap:.6rem;margin-top:1.4rem}
+.pesos div{display:flex;justify-content:space-between;border-bottom:1px solid #2a2a2a;padding-bottom:.5rem}
+.escala{display:grid;gap:1.1rem}
+.escala .fila{display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:baseline;border-bottom:1px solid var(--concreto-2);padding-bottom:1rem}
+.escala .etq{font-size:.72rem;font-weight:700;color:var(--acero);line-height:1.4}
+@media (max-width:860px){.tipo{grid-template-columns:1fr}.escala .fila{grid-template-columns:1fr}}
+
+/* Elementos gráficos */
+.elementos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.elem .muestra{height:180px;border-radius:var(--radio-s);margin-bottom:1rem;display:grid;place-items:center;overflow:hidden;position:relative}
+.elem h4{font-size:1.05rem;letter-spacing:0;margin-bottom:.3rem}
+.elem p{font-size:.9rem;color:#4a4a4a}
+.diag{background:var(--negro)}
+.diag::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,var(--rojo) 0 45%,transparent 45%)}
+.diag span{position:relative;color:#fff;font-weight:900;font-size:1.6rem;text-transform:uppercase}
+.iconos{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+.iconos i{width:56px;height:56px;border-radius:14px;background:var(--rojo);display:grid;place-items:center;font-style:normal;font-size:1.6rem;box-shadow:0 10px 20px -10px rgba(230,15,22,.8)}
+.boton-demo{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+@media (max-width:860px){.elementos{grid-template-columns:1fr}}
+
+/* Fotografía */
+.fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.fotos .f{aspect-ratio:1;border-radius:var(--radio-s);display:grid;place-items:center;padding:1rem;background:linear-gradient(160deg,#fff,var(--concreto));border:1px solid var(--concreto-2)}
+.fotos .f img{max-height:100%;object-fit:contain;filter:drop-shadow(0 12px 12px rgba(0,0,0,.18))}
+.fotos .f.oscura{background:radial-gradient(circle at 50% 70%,#3a3a3a,#141414)}
+@media (max-width:760px){.fotos{grid-template-columns:1fr 1fr}}
+
+/* Voz */
+.voz{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.voz .col{border-radius:var(--radio);padding:1.6rem}
+.voz .si{background:#E9F8EF;border:2px solid #9BDDB4}
+.voz .no{background:var(--rojo-claro);border:2px solid #F3A6A9}
+.voz h4{font-size:1.1rem;margin-bottom:1rem;letter-spacing:0}
+.voz ul{list-style:none;display:grid;gap:.8rem}
+.voz li{background:#fff;border-radius:10px;padding:.8rem 1rem;font-size:.95rem}
+.principios{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.principios div{padding:1.2rem;border-radius:var(--radio-s);background:var(--concreto)}
+.principios b{display:block;margin-bottom:.3rem}
+.principios span{font-size:.88rem;color:#444}
+@media (max-width:860px){.voz{grid-template-columns:1fr}.principios{grid-template-columns:1fr 1fr}}
+
+/* Aplicaciones */
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.app{border-radius:var(--radio);overflow:hidden;background:var(--concreto);padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
+.app h4{font-size:1rem;letter-spacing:0}
+.app img.tarj{border-radius:10px;box-shadow:var(--sombra-l)}
+.post{aspect-ratio:1;max-width:340px;margin:auto;width:100%;background:var(--negro);color:#fff;border-radius:12px;position:relative;overflow:hidden;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--sombra-l)}
+.post::before{content:"";position:absolute;inset:auto -20% -30% 30%;height:75%;background:var(--rojo);border-radius:50%}
+.post>*{position:relative}
+.post .top{display:flex;justify-content:space-between;align-items:center}
+.post .top img{height:38px;background:#000;border-radius:6px}
+.post h5{font-size:1.7rem;font-weight:900;line-height:1;text-transform:uppercase}
+.post h5 span{color:var(--amarillo)}
+.post .maq-img{position:absolute;right:-6%;bottom:12%;width:62%;filter:drop-shadow(0 18px 18px rgba(0,0,0,.6))}
+.post .pie{background:var(--amarillo);color:var(--negro);font-weight:900;padding:.35rem .7rem;border-radius:6px;font-size:.85rem;align-self:flex-start}
+.casco{display:flex;gap:1.5rem;justify-content:center;align-items:flex-end;flex-wrap:wrap}
+.polo{width:200px;height:220px;background:var(--negro);border-radius:30px 30px 14px 14px;position:relative;clip-path:polygon(22% 0,78% 0,100% 16%,88% 32%,88% 100%,12% 100%,12% 32%,0 16%);display:grid;place-items:center}
+.polo img{width:70px;margin-top:-30px}
+.polo::after{content:"";position:absolute;left:12%;right:12%;bottom:18%;height:12px;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 8px,var(--negro) 8px 16px)}
+.vehiculo{width:100%;max-width:520px;margin:auto;aspect-ratio:2.4/1;position:relative}
+.vehiculo .carr{position:absolute;inset:8% 0 22% 0;background:#fff;border-radius:14px 30px 10px 10px;box-shadow:var(--sombra-l);overflow:hidden;display:flex;align-items:center;padding-left:6%}
+.vehiculo .carr::before{content:"";position:absolute;inset:0 0 0 55%;background:linear-gradient(115deg,transparent 0 18%,var(--rojo) 18%)}
+.vehiculo .carr::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12%;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 10px,var(--negro) 10px 20px)}
+.vehiculo .carr img{height:62%;position:relative;z-index:1}
+.vehiculo .carr b{position:absolute;right:6%;top:50%;transform:translateY(-60%);color:#fff;font-size:clamp(.8rem,2.2vw,1.2rem);font-weight:900;z-index:1;text-align:right;line-height:1.2}
+.vehiculo .rueda{position:absolute;bottom:4%;width:17%;aspect-ratio:1;border-radius:50%;background:#1a1a1a;border:7px solid #444}
+@media (max-width:860px){.apps{grid-template-columns:1fr}}
+
+.descargas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.descargas a{font-size:.88rem}
+
+@media print{
+  .header,.wa-flotante,.indice,.descargas{display:none!important}
+  section{break-inside:avoid;page-break-inside:avoid;padding:2rem 0}
+  .portada{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .aparece{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor">
+    <a class="marca" href="index.html"><img src="img/isotipo-kastor.png" alt=""><span><b>KASTOR</b><small>MANUAL DE MARCA</small></span></a>
+    <a class="btn btn-negro" href="index.html" style="padding:.7rem 1.1rem;font-size:.88rem">← Sitio web</a>
+  </div>
+</header>
+
+<!-- PORTADA -->
+<section class="portada">
+  <div class="contenedor">
+    <div class="aparece">
+      <span class="kicker">Manual de identidad · v1.0</span>
+      <h1 style="margin-top:1rem">Construye<br>y <span>avanza.</span></h1>
+      <p>Esta guía explica cómo se ve, cómo habla y cómo se usa la marca Kastor. Sirve para que todo lo que hagamos —web, redes, tarjetas, uniformes y vehículos— se reconozca al instante.</p>
+      <nav class="indice">
+        <a href="#esencia">01 Esencia</a><a href="#logo">02 Logo</a><a href="#incorrecto">03 Usos incorrectos</a><a href="#color">04 Color</a><a href="#tipografia">05 Tipografía</a><a href="#elementos">06 Elementos</a><a href="#fotografia">07 Fotografía</a><a href="#voz">08 Voz</a><a href="#aplicaciones">09 Aplicaciones</a>
+      </nav>
+    </div>
+    <div class="logo-p aparece"><img src="img/logo-kastor-negro.png" alt="Logo Kastor"></div>
+  </div>
+  <div class="cinta"></div>
+</section>
+
+<!-- 01 ESENCIA -->
+<section id="esencia">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">01 · ESENCIA</span><h2>Quiénes somos</h2><p>Kastor alquila maquinaria liviana y pesada y presta servicios generales de construcción. Nuestro foco es que <b>cualquier persona</b>, desde quien remodela su casa hasta el maestro de obra, consiga la máquina correcta sin complicarse.</p></div>
+    <div class="esencia">
+      <div class="tarjeta aparece"><div class="grande">🎯</div><h3>Propósito</h3><p>Hacer que construir sea más fácil, rápido y seguro para todos.</p></div>
+      <div class="tarjeta aparece"><div class="grande">🔭</div><h3>Visión</h3><p>Ser la empresa de alquiler de maquinaria más confiable y cercana del Perú.</p></div>
+      <div class="tarjeta aparece"><div class="grande">🤝</div><h3>Promesa</h3><p>“Déjanoslo a nosotros”: te asesoramos, te llevamos la máquina y te enseñamos a usarla.</p></div>
+    </div>
+    <div class="personalidad">
+      <div class="rasgo aparece"><b>Fuerte</b><span>Equipos potentes y bien mantenidos.</span></div>
+      <div class="rasgo aparece"><b>Trabajador</b><span>Como el castor: no para hasta terminar la obra.</span></div>
+      <div class="rasgo aparece"><b>Confiable</b><span>Precios claros, cumplimos lo que decimos.</span></div>
+      <div class="rasgo aparece"><b>Cercano</b><span>Hablamos simple, como un buen vecino que sabe de obra.</span></div>
+    </div>
+    <div class="historia aparece">
+      <img src="img/castor-silueta.png" alt="Silueta del castor">
+      <div>
+        <h3 style="font-size:1.4rem;margin-bottom:.5rem;letter-spacing:0">¿Por qué un castor?</h3>
+        <p>El castor es <b>el constructor de la naturaleza</b>. Corta, carga, levanta diques y transforma su terreno con esfuerzo y precisión, igual que nuestras máquinas. Es fuerte y trabajador, pero también cercano y simpático. La <b>K roja</b> le da energía y empuje: el castor avanza junto a ella.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LOGO -->
+<section id="logo" class="gris">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">02 · LOGOTIPO</span><h2>Nuestro logo</h2><p>Siempre se usa uno de estos archivos originales. Nunca se redibuja ni se escribe “Kastor” con otra letra para reemplazarlo.</p></div>
+    <div class="logos">
+      <div class="lienzo b-blanco aparece"><img src="img/logo-kastor.png" alt="Logo principal"><span class="rot">Principal · fondos claros</span></div>
+      <div class="lienzo b-negro aparece"><img src="img/logo-kastor-negro.png" alt="Logo negativo"><span class="rot">Negativo · fondos oscuros</span></div>
+      <div class="lienzo b-blanco aparece"><img src="img/isotipo-kastor.png" alt="Isotipo" style="max-height:180px"><span class="rot">Isotipo · redes, favicon, sellos</span></div>
+      <div class="lienzo b-amarillo aparece"><img src="img/castor-silueta.png" alt="Silueta castor" style="max-height:200px"><span class="rot">Silueta castor · decorativo</span></div>
+    </div>
+
+    <div class="anatomia">
+      <div class="zona aparece">
+        <span class="x" style="top:12px;left:50%;transform:translateX(-50%)">X</span>
+        <span class="x" style="bottom:12px;left:50%;transform:translateX(-50%)">X</span>
+        <span class="x" style="left:14px;top:50%;transform:translateY(-50%)">X</span>
+        <span class="x" style="right:14px;top:50%;transform:translateY(-50%)">X</span>
+        <img src="img/logo-kastor.png" alt="Área de protección">
+      </div>
+      <div class="aparece">
+        <h3 style="font-size:1.4rem;margin-bottom:1rem;letter-spacing:0">Partes y espacio de respeto</h3>
+        <ol>
+          <li><span><b>La K roja.</b> Inicial de la marca, representa fuerza y avance. Su corte diagonal inspira los elementos gráficos.</span></li>
+          <li><span><b>El castor.</b> Nuestro personaje: el constructor. Siempre mira hacia la derecha, hacia adelante.</span></li>
+          <li><span><b>KASTOR.</b> Nombre en Montserrat Black, siempre en mayúsculas.</span></li>
+          <li><span><b>Construye y avanza.</b> Nuestro lema. Puede omitirse cuando el logo es muy pequeño.</span></li>
+        </ol>
+        <p style="margin-top:1.2rem;color:#444"><b>Espacio de respeto (X):</b> alrededor del logo deja libre, como mínimo, la altura de la letra “K” de la palabra KASTOR. Ningún texto o imagen puede entrar en esa zona.</p>
+        <div class="tamanos">
+          <div><img src="img/logo-kastor.png" style="height:110px" alt=""><br>Impreso ≥ 3 cm</div>
+          <div><img src="img/logo-kastor.png" style="height:70px" alt=""><br>Digital ≥ 120 px</div>
+          <div><img src="img/isotipo-kastor.png" style="height:36px" alt=""><br>Isotipo ≥ 32 px</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reglas">
+      <div class="regla tarjeta aparece"><h4>✅ Fondo claro</h4><p>Usa el logo principal sobre blanco o gris concreto.</p></div>
+      <div class="regla tarjeta aparece"><h4>✅ Fondo oscuro</h4><p>Usa la versión negativa sobre negro. Así el castor se ve blanco y nítido.</p></div>
+      <div class="regla tarjeta aparece"><h4>✅ Sobre fotos</h4><p>Coloca el logo dentro de una placa blanca o negra, nunca directamente sobre una foto con mucho detalle.</p></div>
+    </div>
+    <div class="descargas">
+      <a class="btn btn-negro" href="img/logo-kastor.png" download>⬇ Logo principal (PNG)</a>
+      <a class="btn btn-negro" href="img/logo-kastor-negro.png" download>⬇ Logo negativo (PNG)</a>
+      <a class="btn btn-borde" href="img/isotipo-kastor.png" download>⬇ Isotipo (PNG)</a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 INCORRECTOS -->
+<section id="incorrecto">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">03 · USOS INCORRECTOS</span><h2>Lo que no se hace</h2><p>Estos errores hacen que la marca se vea descuidada y poco confiable. Evítalos siempre.</p></div>
+    <div class="malos">
+      <div class="malo aparece"><div class="l"><img src="img/logo-kastor.png" style="transform:scaleX(1.5)" alt=""></div><p>No estirar ni aplastar</p></div>
+      <div class="malo aparece"><div class="l"><img src="img/logo-kastor.png" style="transform:rotate(-18deg)" alt=""></div><p>No rotar ni inclinar</p></div>
+      <div class="malo aparece"><div class="l"><img src="img/logo-kastor.png" style="filter:hue-rotate(200deg)" alt=""></div><p>No cambiar los colores</p></div>
+      <div class="malo aparece"><div class="l" style="background:var(--rojo)"><img src="img/logo-kastor.png" style="mix-blend-mode:multiply" alt=""></div><p>No usar sobre rojo</p></div>
+      <div class="malo aparece"><div class="l" style="background:url(img/maq/retroexcavadora.webp) center/cover,#f4c400"><img src="img/logo-kastor.png" style="mix-blend-mode:multiply;opacity:.9" alt=""></div><p>No poner sobre fotos cargadas</p></div>
+      <div class="malo aparece"><div class="l"><img src="img/logo-kastor.png" style="filter:drop-shadow(8px 8px 4px rgba(0,0,0,.6)) blur(.4px)" alt=""></div><p>No agregar sombras ni efectos</p></div>
+      <div class="malo aparece"><div class="l"><img src="img/logo-kastor.png" style="opacity:.25" alt=""></div><p>No usar transparente</p></div>
+      <div class="malo aparece"><div class="l"><span style="font-family:'Comic Sans MS',cursive;font-size:2rem;color:#2563eb">Kastor</span></div><p>No reescribir con otra letra</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 COLOR -->
+<section id="color" class="gris">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">04 · COLOR</span><h2>Paleta de colores</h2><p>El <b>rojo</b> da energía y llama a la acción, el <b>negro</b> transmite fuerza y el <b>amarillo</b> viene de la señalización de obra. Toca un color para copiar su código.</p></div>
+    <div class="paleta" id="paleta"></div>
+    <h3 style="margin-top:2.5rem;font-size:1.2rem;letter-spacing:0">Proporción de uso</h3>
+    <div class="proporcion">
+      <div style="flex:55;background:#fff;border:1px solid var(--concreto-2)">Blanco / Concreto 55%</div>
+      <div style="flex:28;background:var(--negro);color:#fff">Negro 28%</div>
+      <div style="flex:12;background:var(--rojo);color:#fff">Rojo 12%</div>
+      <div style="flex:5;background:var(--amarillo)">5%</div>
+    </div>
+    <p style="margin-top:.8rem;color:#444;font-size:.92rem">El rojo es el protagonista, pero se usa en dosis: botones, títulos destacados y la K. El amarillo es solo un acento, como la cinta de seguridad.</p>
+    <div class="combos">
+      <div class="combo" style="background:var(--negro);color:#fff">Alquila hoy<small>Blanco sobre negro ✔</small></div>
+      <div class="combo" style="background:var(--rojo);color:#fff">Cotiza gratis<small>Blanco sobre rojo ✔</small></div>
+      <div class="combo" style="background:var(--amarillo);color:var(--negro)">¡Llámanos!<small>Negro sobre amarillo ✔</small></div>
+      <div class="combo" style="background:#fff;color:var(--rojo);border:1px solid var(--concreto-2)">Kastor<small style="color:#444">Rojo sobre blanco, solo títulos ✔</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 TIPOGRAFÍA -->
+<section id="tipografia">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">05 · TIPOGRAFÍA</span><h2>Montserrat</h2><p>Una sola familia tipográfica, gratuita (Google Fonts), sólida y muy legible en celular. Los títulos van en mayúsculas y peso Black. Los textos van en peso Regular o Medium.</p></div>
+    <div class="tipo">
+      <div class="especimen aparece">
+        <div class="aa">A<span>a</span></div>
+        <p>ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>abcdefghijklmnñopqrstuvwxyz<br>0123456789 ¡!¿?@S/</p>
+        <div class="pesos">
+          <div style="font-weight:900"><span>Black</span><span>900 · Títulos</span></div>
+          <div style="font-weight:800"><span>ExtraBold</span><span>800 · Botones, subtítulos</span></div>
+          <div style="font-weight:600"><span>SemiBold</span><span>600 · Destacados</span></div>
+          <div style="font-weight:400"><span>Regular</span><span>400 · Textos</span></div>
+        </div>
+      </div>
+      <div class="escala aparece">
+        <div class="fila"><span class="etq">TÍTULO PRINCIPAL<br>Black 900 · mayúsculas</span><span style="font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1;text-transform:uppercase;letter-spacing:-.02em">Alquila hoy</span></div>
+        <div class="fila"><span class="etq">TÍTULO DE SECCIÓN<br>Black 900 · mayúsculas</span><span style="font-weight:900;font-size:1.9rem;line-height:1.1;text-transform:uppercase">Equipos para tu obra</span></div>
+        <div class="fila"><span class="etq">ANTETÍTULO<br>ExtraBold 800 · rojo · espaciado</span><span class="kicker">Maquinaria liviana</span></div>
+        <div class="fila"><span class="etq">SUBTÍTULO<br>ExtraBold 800</span><span style="font-weight:800;font-size:1.25rem">Plancha compactadora</span></div>
+        <div class="fila"><span class="etq">TEXTO<br>Regular 400 · 16 px</span><span>Aplana y endurece tierra, arena o afirmado antes de poner piso, adoquines o veredas.</span></div>
+        <div class="fila"><span class="etq">ALTERNATIVA<br>sin internet</span><span style="font-family:Arial,sans-serif">Si Montserrat no está disponible (Word, Excel), usa <b>Arial</b> o <b>Arial Black</b>.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ELEMENTOS -->
+<section id="elementos" class="gris">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">06 · ELEMENTOS GRÁFICOS</span><h2>Nuestro lenguaje visual</h2><p>Recursos que acompañan al logo y hacen que todo se vea “Kastor” aunque el logo no aparezca.</p></div>
+    <div class="elementos">
+      <div class="elem aparece"><div class="muestra" style="background:repeating-linear-gradient(-45deg,var(--amarillo) 0 24px,var(--negro) 24px 48px)"></div><h4>Cinta de seguridad</h4><p>Franjas amarillas y negras a 45°. Se usan como borde o separador, nunca como fondo de un texto largo.</p></div>
+      <div class="elem aparece"><div class="muestra diag"><span>Corte K</span></div><h4>Diagonal de la K</h4><p>El corte inclinado de la K se usa para dividir bloques de color, en banners y vehículos.</p></div>
+      <div class="elem aparece"><div class="muestra" style="background:#fff"><div class="iconos"><i>🔨</i><i>💡</i><i>🚜</i><i>🚛</i></div></div><h4>Íconos en placa roja</h4><p>Íconos simples dentro de un cuadrado rojo con esquinas redondeadas.</p></div>
+      <div class="elem aparece"><div class="muestra" style="background:var(--negro)"><span class="kicker" style="font-size:1rem">Antetítulo</span></div><h4>Antetítulo con guion</h4><p>Pequeño guion rojo inclinado delante de los antetítulos.</p></div>
+      <div class="elem aparece"><div class="muestra" style="background:#fff"><div class="boton-demo"><span class="btn btn-rojo">Cotiza gratis</span><span class="btn btn-wa">WhatsApp</span><span class="btn btn-negro">Llámanos</span></div></div><h4>Botones redondeados</h4><p>Rojo para la acción principal, verde solo para WhatsApp y negro para acciones secundarias.</p></div>
+      <div class="elem aparece"><div class="muestra" style="background:var(--amarillo)"><span style="background:#fff;border:3px solid var(--negro);box-shadow:6px 6px 0 var(--negro);padding:.6rem 1rem;font-weight:900;text-transform:uppercase;transform:rotate(-3deg)">¡Déjanoslo a nosotros!</span></div><h4>Sello de obra</h4><p>Etiqueta con borde negro grueso y sombra dura para frases cortas y ofertas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 FOTOGRAFÍA -->
+<section id="fotografia">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">07 · FOTOGRAFÍA</span><h2>Cómo mostramos las máquinas</h2><p>Las máquinas se muestran <b>recortadas, sin fondo</b> y con una sombra suave. Así se ven limpias, ordenadas y protagonistas. Las fotos de obra real deben ser luminosas y mostrar el equipo trabajando.</p></div>
+    <div class="fotos">
+      <div class="f aparece"><img src="img/maq/compresora.webp" alt=""></div>
+      <div class="f aparece"><img src="img/maq/generador-5500.webp" alt=""></div>
+      <div class="f oscura aparece"><img src="img/maq/retroexcavadora.webp" alt=""></div>
+      <div class="f aparece"><img src="img/maq/plancha-compactadora.webp" alt=""></div>
+    </div>
+    <div class="reglas">
+      <div class="regla tarjeta aparece"><h4>✅ Recortada y centrada</h4><p>La máquina completa, sin cortar partes, sobre blanco, gris concreto o negro.</p></div>
+      <div class="regla tarjeta aparece"><h4>✅ Limpia y real</h4><p>Siempre fotos de equipos limpios. Mejor todavía si son fotos de nuestros propios equipos.</p></div>
+      <div class="regla tarjeta aparece"><h4>❌ Evitar</h4><p>Fotos borrosas, oscuras, con marcas de agua de otras empresas o con fondos desordenados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 VOZ -->
+<section id="voz" class="gris">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">08 · VOZ Y TONO</span><h2>Cómo hablamos</h2><p>Hablamos como un vecino que sabe mucho de obra: claro, directo y amable. Explicamos para qué sirve cada cosa sin palabras técnicas innecesarias.</p></div>
+    <div class="principios">
+      <div><b>Simple</b><span>Frases cortas. Si usamos una palabra técnica, la explicamos.</span></div>
+      <div><b>Útil</b><span>Primero decimos para qué sirve; después, el modelo.</span></div>
+      <div><b>Cercano</b><span>Tuteamos con respeto. Usamos “tú” y “tu obra”.</span></div>
+      <div><b>Con energía</b><span>Verbos de acción: construye, avanza, alquila, llámanos.</span></div>
+    </div>
+    <div class="voz">
+      <div class="col si aparece"><h4>✅ Así sí</h4><ul>
+        <li>“¿Vas a romper un piso? Te llevamos el martillo y te enseñamos a usarlo.”</li>
+        <li>“La plancha compactadora aplana la tierra para que tu piso no se hunda.”</li>
+        <li>“¡Solo llámanos! Déjanoslo a nosotros.”</li>
+      </ul></div>
+      <div class="col no aparece"><h4>❌ Así no</h4><ul>
+        <li>“Contamos con equipos de percusión neumática de alto rendimiento.”</li>
+        <li>“Compactador de placa vibratoria reversible 5.5 HP, frecuencia 5800 vpm.”</li>
+        <li>“Estimado cliente, sírvase remitir su requerimiento.”</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 APLICACIONES -->
+<section id="aplicaciones">
+  <div class="contenedor">
+    <div class="titulo-sec"><span class="num">09 · APLICACIONES</span><h2>La marca en la calle</h2><p>Ejemplos de cómo se aplica la identidad en piezas reales. Estas son referencias para guiar a imprentas y diseñadores.</p></div>
+    <div class="apps">
+      <div class="app aparece"><h4>Tarjeta de presentación · frente</h4><img class="tarj" src="img/tarjeta-frente.webp" alt="Tarjeta frente"></div>
+      <div class="app aparece"><h4>Tarjeta de presentación · reverso</h4><img class="tarj" src="img/tarjeta-reverso.webp" alt="Tarjeta reverso"></div>
+      <div class="app aparece"><h4>Publicación para redes / WhatsApp</h4>
+        <div class="post">
+          <div class="top"><img src="img/isotipo-kastor-negro.png" alt=""><span class="kicker" style="color:var(--amarillo)">Alquiler</span></div>
+          <img class="maq-img" src="img/maq/generador-5500.webp" alt="">
+          <h5>¿Sin luz<br>en tu <span>obra?</span></h5>
+          <span class="pie">📞 913 170 982</span>
+        </div>
+      </div>
+      <div class="app aparece"><h4>Uniforme del personal</h4>
+        <div class="casco"><div class="polo"><img src="img/isotipo-kastor-negro.png" alt=""></div></div>
+        <p style="font-size:.88rem;color:#444;text-align:center">Polo negro, isotipo al pecho y franja de cinta de seguridad reflectiva.</p>
+      </div>
+      <div class="app aparece" style="grid-column:1/-1"><h4>Vehículo de reparto</h4>
+        <div class="vehiculo">
+          <div class="carr"><img src="img/logo-kastor.png" alt=""><b>ALQUILER<br>913 170 982</b></div>
+          <div class="rueda" style="left:12%"></div><div class="rueda" style="right:12%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem">
+    <img src="img/logo-kastor-negro.png" alt="Kastor">
+    <div style="font-size:.9rem">Manual de marca Kastor · v1.0<br><a href="index.html" style="color:var(--amarillo)">Ver el sitio web →</a></div>
+  </div>
+</footer>
+
+<script>
+const COLORES = [
+  {n:"Rojo Kastor", hex:"#E60F16", rgb:"230 · 15 · 22", cmyk:"0 · 98 · 94 · 0", pms:"Pantone 485 C (aprox.)", txt:"#fff"},
+  {n:"Negro Obra", hex:"#0A0A0A", rgb:"10 · 10 · 10", cmyk:"0 · 0 · 0 · 100", pms:"Black 6 C (aprox.)", txt:"#fff"},
+  {n:"Amarillo Seguridad", hex:"#FFD200", rgb:"255 · 210 · 0", cmyk:"0 · 18 · 100 · 0", pms:"Pantone 116 C (aprox.)", txt:"#0A0A0A"},
+  {n:"Gris Concreto", hex:"#F3F2EF", rgb:"243 · 242 · 239", cmyk:"0 · 0 · 2 · 5", pms:"Fondos", txt:"#0A0A0A"},
+  {n:"Gris Acero", hex:"#6B6B6B", rgb:"107 · 107 · 107", cmyk:"0 · 0 · 0 · 58", pms:"Textos secundarios", txt:"#fff"},
+];
+document.getElementById("paleta").innerHTML = COLORES.map(c => `
+  <button class="color aparece" data-hex="${c.hex}" aria-label="Copiar ${c.hex}">
+    <div class="m" style="background:${c.hex};color:${c.txt}">${c.n}</div>
+    <div class="d"><b>${c.hex}</b>RGB ${c.rgb}<br>CMYK ${c.cmyk}<br>${c.pms}<div class="copiado"></div></div>
+  </button>`).join("");
+document.getElementById("paleta").addEventListener("click", e => {
+  const b = e.target.closest(".color"); if (!b) return;
+  navigator.clipboard?.writeText(b.dataset.hex);
+  const s = b.querySelector(".copiado"); s.textContent = "¡Copiado!"; setTimeout(() => s.textContent = "", 1500);
+});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), {threshold:.1});
+document.querySelectorAll(".aparece").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
